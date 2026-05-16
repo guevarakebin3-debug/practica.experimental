@@ -8,6 +8,17 @@ from Bloque_3.operadores_aritmeticos import ejecutar as operadores
 from Bloque_4.entrada_datos import ejecutar as entrada
 from Bloque_4.promedio_numeros import ejecutar as promedio
 from Bloque_4.concatenacion_texto import ejecutar as concat
+from Bloque_5.par_impar import ejecutar as par
+from Bloque_5.notas import ejecutar as notas
+from Bloque_5.login import ejecutar as login
+
+
+
+
+
+
+
+
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
 # =========================
@@ -131,9 +142,32 @@ def menu_bloque_3():
 def menu_bloque_4():
     crear_menu_bloque("BLOQUE 4", ["ejercicio1"])
 
-
 def menu_bloque_5():
-    crear_menu_bloque("BLOQUE 5", ["ejercicio1"])
+
+    opciones = {
+
+        "1": {
+            "texto": "Par o impar",
+            "accion": par
+        },
+
+        "2": {
+            "texto": "Notas",
+            "accion": notas
+        },
+
+        "3": {
+            "texto": "Login",
+            "accion": login
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 5", opciones)
 
 
 def menu_bloque_6():
