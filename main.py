@@ -28,6 +28,9 @@ from Bloque_12.value_error import ejecutar as value_error
 from Bloque_12.index_error import ejecutar as index_error
 from Bloque_12.division_error import ejecutar as division_error
 from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
+from Bloque_13.decoradores import ejecutar as decoradores
+
+
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -192,7 +195,12 @@ def menu_bloque_12():
     ])
 
 def menu_bloque_13():
-    crear_menu_bloque("BLOQUE 13", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 13", [
+
+        ("Decoradores", decoradores)
+
+    ])
 
 
 def menu_bloque_14():
