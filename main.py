@@ -24,7 +24,10 @@ from Bloque_10.copia_diccionario import ejecutar as copia_diccionario
 from Bloque_11.conjuntos import ejecutar as conjuntos
 from Bloque_11.duplicados import ejecutar as duplicados
 from Bloque_11.diferencia_simetrica import ejecutar as diferencia_simetrica
-
+from Bloque_12.value_error import ejecutar as value_error
+from Bloque_12.index_error import ejecutar as index_error
+from Bloque_12.division_error import ejecutar as division_error
+from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -178,8 +181,15 @@ def menu_bloque_11():
 
 
 def menu_bloque_12():
-    crear_menu_bloque("BLOQUE 12", ["ejercicio1"])
 
+    crear_submenu("BLOQUE 12", [
+
+        ("ValueError", value_error),
+        ("IndexError", index_error),
+        ("Division Error", division_error),
+        ("Actualizar lista", actualizar_lista)
+
+    ])
 
 def menu_bloque_13():
     crear_menu_bloque("BLOQUE 13", ["ejercicio1"])
