@@ -1,10 +1,13 @@
 from menu import mostrar_menu
-from Bloque_0.persona import ejecutar as persona
+from Bloque_0.persona import ejecutar as persona 
 from Bloque_1.producto import ejecutar as producto
 from Bloque_1.estudiante import ejecutar as estudiante
 from Bloque_2.tipos_datos import ejecutar as tipos
 from Bloque_2.clases_objetos import ejecutar as listas
 from Bloque_3.operadores_aritmeticos import ejecutar as operadores
+from Bloque_4.entrada_datos import ejecutar as entrada
+from Bloque_4.promedio_numeros import ejecutar as promedio
+from Bloque_4.concatenacion_texto import ejecutar as concat
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
 # =========================
