@@ -30,7 +30,9 @@ from Bloque_12.division_error import ejecutar as division_error
 from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
 from Bloque_13.decoradores import ejecutar as decoradores
 from Bloque_14.unpacking import ejecutar as unpacking
-from Bloque_15.funciones_lambda import ejecutar as funciones_lambda
+from Bloque_15.map_lambda import ejecutar as map_lambda
+from Bloque_15.filter_lambda import ejecutar as filter_lambda
+from Bloque_15.reduce_lambda import ejecutar as reduce_lambda
 from Bloque_16.archivos import ejecutar as archivos
 from Bloque_16.json_datos import ejecutar as json_datos
 from Bloque_17.promedio_mixin import ejecutar as promedio_mixin
@@ -220,10 +222,11 @@ def menu_bloque_15():
 
     crear_submenu("BLOQUE 15", [
 
-        ("Funciones lambda", funciones_lambda)
+        ("Map + Lambda", map_lambda),
+        ("Filter + Lambda", filter_lambda),
+        ("Reduce + Lambda", reduce_lambda)
 
     ])
-
 
 def menu_bloque_16():
 
