@@ -47,7 +47,7 @@ def menu_bloque_0():
 
         "1": {
             "texto": "Persona",
-            "accion": person
+            "accion": persona
         },
 
         "0": {
