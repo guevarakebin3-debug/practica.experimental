@@ -1,6 +1,3 @@
-from Bloque_0.person import ejecutar
-ejecutar()
-
 
 class Persona:
     def __init__(self, nombre, edad):
