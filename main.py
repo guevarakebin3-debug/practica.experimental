@@ -4,7 +4,7 @@ from Bloque_1.producto import ejecutar as producto
 from Bloque_1.estudiante import ejecutar as estudiante
 from Bloque_2.tipos_datos import ejecutar as tipos
 from Bloque_2.clases_objetos import ejecutar as listas
-
+from Bloque_3.operadores_aritmeticos import ejecutar as operadores
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
 # =========================
