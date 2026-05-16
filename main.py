@@ -85,7 +85,26 @@ def menu_bloque_1():
     mostrar_menu("BLOQUE 1", opciones)
 
 def menu_bloque_2():
-    crear_menu_bloque("BLOQUE 2", ["ejercicio1", "ejercicio2"])
+
+    opciones = {
+
+        "1": {
+            "texto": "Tipos de datos",
+            "accion": tipos
+        },
+
+        "2": {
+            "texto": "Listas",
+            "accion": listas
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 2", opciones)
 
 
 def menu_bloque_3():
