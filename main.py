@@ -30,7 +30,7 @@ from Bloque_12.division_error import ejecutar as division_error
 from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
 from Bloque_13.decoradores import ejecutar as decoradores
 from Bloque_14.unpacking import ejecutar as unpacking
-
+from Bloque_15.funciones_lambda import ejecutar as funciones_lambda
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -211,9 +211,13 @@ def menu_bloque_14():
 
     ])
 
-
 def menu_bloque_15():
-    crear_menu_bloque("BLOQUE 15", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 15", [
+
+        ("Funciones lambda", funciones_lambda)
+
+    ])
 
 
 def menu_bloque_16():
