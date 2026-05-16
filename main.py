@@ -11,7 +11,7 @@ from Bloque_4.concatenacion_texto import ejecutar as concat
 from Bloque_5.par_impar import ejecutar as par
 from Bloque_5.notas import ejecutar as notas
 from Bloque_5.login import ejecutar as login
-
+from Bloque_6.ciclos import ejecutar as ciclos
 
 
 
@@ -169,10 +169,22 @@ def menu_bloque_5():
 
     mostrar_menu("BLOQUE 5", opciones)
 
-
 def menu_bloque_6():
-    crear_menu_bloque("BLOQUE 6", ["ejercicio1"])
 
+    opciones = {
+
+        "1": {
+            "texto": "Ciclos",
+            "accion": ciclos
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 6", opciones)
 
 def menu_bloque_7():
     crear_menu_bloque("BLOQUE 7", ["ejercicio1"])
