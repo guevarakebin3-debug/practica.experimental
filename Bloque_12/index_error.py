@@ -1,6 +1,5 @@
 def ejecutar():
 
-    print("Bloque 12")
 
     print("Ejercicio 2")
     print("IndexError interactivo")
