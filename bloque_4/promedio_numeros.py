@@ -1,6 +1,5 @@
 def ejecutar():
 
-    print("Bloque 4")
     print("Ejercicio 2")
     print("Promedio de dos números")
 
