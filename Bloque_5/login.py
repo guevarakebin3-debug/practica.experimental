@@ -1,6 +1,5 @@
 def ejecutar():
 
-    print("Ejercicio 3")
     print("Sistema de login")
     print("Usuario: admin | password: 123")
 
