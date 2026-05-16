@@ -1,6 +1,5 @@
 def ejecutar():
 
-    print("Bloque 4")
     print("Ejercicio 1")
     print("Solicitud de nombre y edad")
 
