@@ -55,158 +55,83 @@ def crear_submenu(titulo, ejercicios):
 
 def menu_bloque_0():
 
-    opciones = {
+    crear_submenu("BLOQUE 0", [
 
-        "1": {
-            "texto": "Persona",
-            "accion": persona
-        },
+        ("Persona", persona)
 
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
+    ])
 
-    mostrar_menu("BLOQUE 0", opciones)
    
 
 def menu_bloque_1():
 
-    opciones = {
+    crear_submenu("BLOQUE 1", [
 
-        "1": {
-            "texto": "Producto",
-            "accion": producto
-        },
+        ("Producto", product),
+        ("Estudiante", student)
 
-        "2": {
-            "texto": "Estudiante",
-            "accion": estudiante
-        },
+    ])
 
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
 
     mostrar_menu("BLOQUE 1", opciones)
 
 def menu_bloque_2():
 
-    opciones = {
+    crear_submenu("BLOQUE 2", [
 
-        "1": {
-            "texto": "Tipos de datos",
-            "accion": tipos
-        },
+        ("Tipos de datos", tipos),
+        ("Listas", listas)
 
-        "2": {
-            "texto": "Listas",
-            "accion": listas
-        },
-
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
-
-    mostrar_menu("BLOQUE 2", opciones)
+    ])
 
 
 def menu_bloque_3():
 
-    opciones = {
+    crear_submenu("BLOQUE 3", [
 
-        "1": {
-            "texto": "Operadores",
-            "accion": operadores
-        },
+        ("Operadores", operadores)
 
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
-
-    mostrar_menu("BLOQUE 3", opciones)
-
+    ])
 
 def menu_bloque_4():
-    crear_menu_bloque("BLOQUE 4", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 4", [
+
+        ("Entrada de datos", entrada),
+        ("Promedio", promedio),
+        ("Concatenación", concat)
+
+    ])
 
 def menu_bloque_5():
 
-    opciones = {
+    crear_submenu("BLOQUE 5", [
 
-        "1": {
-            "texto": "Par o impar",
-            "accion": par
-        },
+        ("Par o impar", par),
+        ("Notas", notas),
+        ("Login", login)
 
-        "2": {
-            "texto": "Notas",
-            "accion": notas
-        },
+    ])
 
-        "3": {
-            "texto": "Login",
-            "accion": login
-        },
-
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
-
-    mostrar_menu("BLOQUE 5", opciones)
 
 def menu_bloque_6():
 
-    opciones = {
+    crear_submenu("BLOQUE 6", [
 
-        "1": {
-            "texto": "Ciclos",
-            "accion": ciclos
-        },
+        ("Ciclos", ciclos)
 
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
-
-    mostrar_menu("BLOQUE 6", opciones)
+    ])
 
 def menu_bloque_7():
 
-    opciones = {
+    crear_submenu("BLOQUE 7", [
 
-        "1": {
-            "texto": "Funciones",
-            "accion": funciones
-        },
+        ("Funciones", funciones),
+        ("Factorial", factorial),
+        ("Operaciones", operaciones)
 
-        "2": {
-            "texto": "Factorial",
-            "accion": factorial
-        },
+    ])
 
-        "3": {
-            "texto": "Operaciones",
-            "accion": operaciones
-        },
-
-        "0": {
-            "texto": "Volver",
-            "accion": None
-        }
-    }
-
-    mostrar_menu("BLOQUE 7", opciones)
 
 
 def menu_bloque_8():
