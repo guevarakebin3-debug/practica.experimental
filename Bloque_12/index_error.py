@@ -1,7 +1,5 @@
 def ejecutar():
 
-
-    print("Ejercicio 2")
     print("IndexError interactivo")
 
     lista = []
