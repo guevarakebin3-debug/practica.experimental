@@ -65,7 +65,7 @@ def menu_bloque_1():
 
         "1": {
             "texto": "Producto",
-            "accion": product
+            "accion": producto
         },
 
         "0": {
