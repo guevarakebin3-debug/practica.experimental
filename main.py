@@ -33,6 +33,9 @@ from Bloque_14.unpacking import ejecutar as unpacking
 from Bloque_15.funciones_lambda import ejecutar as funciones_lambda
 from Bloque_16.archivos import ejecutar as archivos
 from Bloque_16.json_datos import ejecutar as json_datos
+from Bloque_17.promedio_mixin import ejecutar as promedio_mixin
+from Bloque_17.validacion_mixin import ejecutar as validacion_mixin
+from Bloque_17.exportar_mixin import ejecutar as exportar_mixin
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -233,7 +236,14 @@ def menu_bloque_16():
 
 
 def menu_bloque_17():
-    crear_menu_bloque("BLOQUE 17", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 17", [
+
+        ("Promedio Mixin", promedio_mixin),
+        ("Validación Mixin", validacion_mixin),
+        ("Exportar Mixin", exportar_mixin)
+
+    ])
 
 
 # =========================
