@@ -17,7 +17,8 @@ from Bloque_7.factorial import ejecutar as factorial
 from Bloque_7.operaciones import ejecutar as operaciones
 from Bloque_8.listas import ejecutar as listas
 from Bloque_8.copiar_lista import ejecutar as copiar
-
+from Bloque_9.tuplas import ejecutar as tuplas
+from Bloque_9.coordenadas import ejecutar as coordenadas
 
 
 
@@ -145,8 +146,13 @@ def menu_bloque_8():
 
 
 def menu_bloque_9():
-    crear_menu_bloque("BLOQUE 9", ["ejercicio1"])
 
+    crear_submenu("BLOQUE 9", [
+
+        ("Tuplas", tuplas),
+        ("Coordenadas", coordenadas)
+
+    ])
 
 def menu_bloque_10():
     crear_menu_bloque("BLOQUE 10", ["ejercicio1"])
