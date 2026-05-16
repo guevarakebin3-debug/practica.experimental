@@ -31,6 +31,8 @@ from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
 from Bloque_13.decoradores import ejecutar as decoradores
 from Bloque_14.unpacking import ejecutar as unpacking
 from Bloque_15.funciones_lambda import ejecutar as funciones_lambda
+from Bloque_16.archivos import ejecutar as archivos
+from Bloque_16.json_datos import ejecutar as json_datos
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -221,7 +223,13 @@ def menu_bloque_15():
 
 
 def menu_bloque_16():
-    crear_menu_bloque("BLOQUE 16", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 16", [
+
+        ("Archivos", archivos),
+        ("JSON datos", json_datos)
+
+    ])
 
 
 def menu_bloque_17():
