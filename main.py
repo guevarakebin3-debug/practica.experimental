@@ -21,7 +21,9 @@ from Bloque_9.tuplas import ejecutar as tuplas
 from Bloque_9.coordenadas import ejecutar as coordenadas
 from Bloque_10.diccionarios import ejecutar as diccionarios
 from Bloque_10.copia_diccionario import ejecutar as copia_diccionario
-
+from Bloque_11.conjuntos import ejecutar as conjuntos
+from Bloque_11.duplicados import ejecutar as duplicados
+from Bloque_11.diferencia_simetrica import ejecutar as diferencia_simetrica
 
 
 # FUNCIONES DE EJEMPLO
@@ -165,7 +167,14 @@ def menu_bloque_10():
     ])
 
 def menu_bloque_11():
-    crear_menu_bloque("BLOQUE 11", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 11", [
+
+        ("Conjuntos", conjuntos),
+        ("Duplicados", duplicados),
+        ("Diferencia simétrica", diferencia_simetrica)
+
+    ])
 
 
 def menu_bloque_12():
