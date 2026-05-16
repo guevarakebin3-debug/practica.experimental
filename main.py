@@ -1,6 +1,8 @@
 from menu import mostrar_menu
 from Bloque_0.persona import ejecutar as persona
 from Bloque_1.producto import ejecutar as producto
+from Bloque_1.estudiante import ejecutar as estudiante
+
 
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
@@ -68,6 +70,11 @@ def menu_bloque_1():
             "accion": producto
         },
 
+        "2": {
+            "texto": "Estudiante",
+            "accion": estudiante
+        },
+
         "0": {
             "texto": "Volver",
             "accion": None
@@ -75,7 +82,6 @@ def menu_bloque_1():
     }
 
     mostrar_menu("BLOQUE 1", opciones)
-
 
 def menu_bloque_2():
     crear_menu_bloque("BLOQUE 2", ["ejercicio1", "ejercicio2"])
