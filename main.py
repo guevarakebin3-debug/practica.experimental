@@ -1,5 +1,5 @@
 from menu import mostrar_menu
-from bloque0.person import ejecutar as person
+from Bloque_0.persona import ejecutar as persona
 
 
 # FUNCIONES DE EJEMPLO
