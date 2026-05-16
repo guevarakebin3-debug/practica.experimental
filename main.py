@@ -15,7 +15,8 @@ from Bloque_6.ciclos import ejecutar as ciclos
 from Bloque_7.funciones import ejecutar as funciones
 from Bloque_7.factorial import ejecutar as factorial
 from Bloque_7.operaciones import ejecutar as operaciones
-
+from Bloque_8.listas import ejecutar as listas
+from Bloque_8.copiar_lista import ejecutar as copiar
 
 
 
@@ -133,9 +134,14 @@ def menu_bloque_7():
     ])
 
 
-
 def menu_bloque_8():
-    crear_menu_bloque("BLOQUE 8", ["ejercicio1"])
+
+    crear_submenu("BLOQUE 8", [
+
+        ("Listas", listas),
+        ("Copiar listas", copiar)
+
+    ])
 
 
 def menu_bloque_9():
