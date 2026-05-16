@@ -1,4 +1,4 @@
-rom menu import mostrar_menu
+from menu import mostrar_menu
 from bloque0.person import ejecutar as person
 
 
