@@ -28,7 +28,8 @@ from Bloque_12.value_error import ejecutar as value_error
 from Bloque_12.index_error import ejecutar as index_error
 from Bloque_12.division_error import ejecutar as division_error
 from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
-from Bloque_13.decoradores import ejecutar as decoradores
+from Bloque_13.decorador_basico import ejecutar as decorador_basico
+from Bloque_13.decorador_avanzado import ejecutar as decorador_avanzado
 from Bloque_14.listas_unpacking import ejecutar as listas_unpacking
 from Bloque_14.diccionarios_unpacking import ejecutar as diccionarios_unpacking
 from Bloque_14.unpacking_extra import ejecutar as unpacking_extra
@@ -40,6 +41,7 @@ from Bloque_16.json_datos import ejecutar as json_datos
 from Bloque_17.promedio_mixin import ejecutar as promedio_mixin
 from Bloque_17.validacion_mixin import ejecutar as validacion_mixin
 from Bloque_17.exportar_mixin import ejecutar as exportar_mixin
+
 
 # FUNCIONES DE EJEMPLO
 # =========================
@@ -207,7 +209,8 @@ def menu_bloque_13():
 
     crear_submenu("BLOQUE 13", [
 
-        ("Decoradores", decoradores)
+        ("Decoradores básicos", decorador_basico),
+        ("Decoradores avanzados", decorador_avanzado)
 
     ])
 
