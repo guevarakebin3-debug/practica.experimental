@@ -156,8 +156,13 @@ def menu_bloque_9():
     ])
 
 def menu_bloque_10():
-    crear_menu_bloque("BLOQUE 10", ["ejercicio1"])
 
+    crear_submenu("BLOQUE 10", [
+
+        ("Diccionarios", diccionarios),
+        ("Copia de diccionarios", copia_diccionario)
+
+    ])
 
 def menu_bloque_11():
     crear_menu_bloque("BLOQUE 11", ["ejercicio1"])
