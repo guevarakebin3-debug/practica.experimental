@@ -22,28 +22,22 @@ from Bloque_7.operaciones import ejecutar as operaciones
 
 
 # FUNCIONES DE EJEMPLO
-# (luego aquí conectas tus archivos reales)
+# =========================
+# FUNCIÓN REUTILIZABLE
+# PARA TODOS LOS SUBMENÚS
 # =========================
 
-def ejecutar_bloque(nombre):
-    print(f"\nEjecutando {nombre}")
-
-
-# =========================
-# SUBMENÚS
-# =========================
-
-def crear_menu_bloque(nombre_bloque, ejercicios):
+def crear_submenu(titulo, ejercicios):
 
     opciones = {}
 
     contador = 1
 
-    for e in ejercicios:
+    for texto, accion in ejercicios:
 
         opciones[str(contador)] = {
-            "texto": e,
-            "accion": lambda n=f"{nombre_bloque} -> {e}": ejecutar_bloque(n)
+            "texto": texto,
+            "accion": accion
         }
 
         contador += 1
@@ -53,8 +47,7 @@ def crear_menu_bloque(nombre_bloque, ejercicios):
         "accion": None
     }
 
-    mostrar_menu(nombre_bloque, opciones)
-
+    mostrar_menu(titulo, opciones)
 
 # =========================
 # BLOQUES (DEL 0 AL 17)
