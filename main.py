@@ -108,7 +108,21 @@ def menu_bloque_2():
 
 
 def menu_bloque_3():
-    crear_menu_bloque("BLOQUE 3", ["ejercicio1", "ejercicio2"])
+
+    opciones = {
+
+        "1": {
+            "texto": "Operadores",
+            "accion": operadores
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 3", opciones)
 
 
 def menu_bloque_4():
