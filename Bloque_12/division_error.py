@@ -1,7 +1,5 @@
 def ejecutar():
 
-    print("Bloque 12")
-
     print("Ejercicio 3")
     print("División con manejo de errores")
 
