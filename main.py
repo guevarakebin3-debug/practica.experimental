@@ -1,6 +1,6 @@
 from menu import mostrar_menu
 from Bloque_0.persona import ejecutar as persona
-
+from Bloque_1.producto import ejecutar as product
 
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
