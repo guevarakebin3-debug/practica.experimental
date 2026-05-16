@@ -19,7 +19,8 @@ from Bloque_8.listas import ejecutar as listas
 from Bloque_8.copiar_lista import ejecutar as copiar
 from Bloque_9.tuplas import ejecutar as tuplas
 from Bloque_9.coordenadas import ejecutar as coordenadas
-
+from Bloque_10.diccionarios import ejecutar as diccionarios
+from Bloque_10.copia_diccionario import ejecutar as copia_diccionario
 
 
 
