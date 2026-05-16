@@ -42,7 +42,21 @@ def crear_menu_bloque(nombre_bloque, ejercicios):
 # =========================
 
 def menu_bloque_0():
-    crear_menu_bloque("BLOQUE 2", ["ejercicio1", "ejercicio2"])
+
+    opciones = {
+
+        "1": {
+            "texto": "Persona",
+            "accion": person
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 0", opciones)
    
 
 def menu_bloque_1():
@@ -50,13 +64,8 @@ def menu_bloque_1():
     opciones = {
 
         "1": {
-            "texto": "Product",
-            "accion": product   # 👈 ejecuta archivo real
-        },
-
-        "2": {
-            "texto": "Student",
-            "accion": student   # 👈 ejecuta archivo real
+            "texto": "Producto",
+            "accion": product
         },
 
         "0": {
