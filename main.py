@@ -2,7 +2,8 @@ from menu import mostrar_menu
 from Bloque_0.persona import ejecutar as persona
 from Bloque_1.producto import ejecutar as producto
 from Bloque_1.estudiante import ejecutar as estudiante
-
+from Bloque_2.tipos_datos import ejecutar as tipos
+from Bloque_2.clases_objetos import ejecutar as listas
 
 # FUNCIONES DE EJEMPLO
 # (luego aquí conectas tus archivos reales)
