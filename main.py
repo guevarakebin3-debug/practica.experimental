@@ -12,7 +12,9 @@ from Bloque_5.par_impar import ejecutar as par
 from Bloque_5.notas import ejecutar as notas
 from Bloque_5.login import ejecutar as login
 from Bloque_6.ciclos import ejecutar as ciclos
-
+from Bloque_7.funciones import ejecutar as funciones
+from Bloque_7.factorial import ejecutar as factorial
+from Bloque_7.operaciones import ejecutar as operaciones
 
 
 
@@ -187,7 +189,31 @@ def menu_bloque_6():
     mostrar_menu("BLOQUE 6", opciones)
 
 def menu_bloque_7():
-    crear_menu_bloque("BLOQUE 7", ["ejercicio1"])
+
+    opciones = {
+
+        "1": {
+            "texto": "Funciones",
+            "accion": funciones
+        },
+
+        "2": {
+            "texto": "Factorial",
+            "accion": factorial
+        },
+
+        "3": {
+            "texto": "Operaciones",
+            "accion": operaciones
+        },
+
+        "0": {
+            "texto": "Volver",
+            "accion": None
+        }
+    }
+
+    mostrar_menu("BLOQUE 7", opciones)
 
 
 def menu_bloque_8():
