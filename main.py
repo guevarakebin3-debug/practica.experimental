@@ -29,7 +29,9 @@ from Bloque_12.index_error import ejecutar as index_error
 from Bloque_12.division_error import ejecutar as division_error
 from Bloque_12.actualizar_lista import ejecutar as actualizar_lista
 from Bloque_13.decoradores import ejecutar as decoradores
-from Bloque_14.unpacking import ejecutar as unpacking
+from Bloque_14.listas_unpacking import ejecutar as listas_unpacking
+from Bloque_14.diccionarios_unpacking import ejecutar as diccionarios_unpacking
+from Bloque_14.unpacking_extra import ejecutar as unpacking_extra
 from Bloque_15.map_lambda import ejecutar as map_lambda
 from Bloque_15.filter_lambda import ejecutar as filter_lambda
 from Bloque_15.reduce_lambda import ejecutar as reduce_lambda
@@ -214,7 +216,9 @@ def menu_bloque_14():
 
     crear_submenu("BLOQUE 14", [
 
-        ("Unpacking", unpacking)
+        ("Listas Unpacking", listas_unpacking),
+        ("Diccionarios Unpacking", diccionarios_unpacking),
+        ("Unpacking Extra", unpacking_extra)
 
     ])
 
