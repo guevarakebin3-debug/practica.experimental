@@ -1,24 +1,53 @@
 def ejecutar():
-
-    print("Bloque 11")
-
     print("Ejercicio 1")
     print("Conjuntos interactivos")
 
     A = set()
     B = set()
 
-    cantidad_a = int(input("¿Cuántos números tendrá el conjunto A?: "))
+    # Validar cantidad A
+    while True:
+        try:
+            cantidad_a = int(input("¿Cuántos números tendrá el conjunto A?: "))
+            if cantidad_a < 0:
+                print("❌ No puede ser negativo")
+            else:
+                break
+        except ValueError:
+            print("❌ Debe ingresar un número entero")
 
+    # Llenar A
     for i in range(cantidad_a):
-        num = int(input(f"Ingrese número {i + 1} para A: "))
-        A.add(num)
 
-    cantidad_b = int(input("\n¿Cuántos números tendrá el conjunto B?: "))
+        while True:
+            try:
+                num = int(input(f"Ingrese número {i + 1} para A: "))
+                A.add(num)
+                break
+            except ValueError:
+                print("❌ Debe ingresar un número entero")
 
+    # Validar cantidad B
+    while True:
+        try:
+            cantidad_b = int(input("\n¿Cuántos números tendrá el conjunto B?: "))
+            if cantidad_b < 0:
+                print("❌ No puede ser negativo")
+            else:
+                break
+        except ValueError:
+            print("❌ Debe ingresar un número entero")
+
+    # Llenar B
     for i in range(cantidad_b):
-        num = int(input(f"Ingrese número {i + 1} para B: "))
-        B.add(num)
+
+        while True:
+            try:
+                num = int(input(f"Ingrese número {i + 1} para B: "))
+                B.add(num)
+                break
+            except ValueError:
+                print("❌ Debe ingresar un número entero")
 
     print("\nConjunto A:", A)
     print("Conjunto B:", B)
