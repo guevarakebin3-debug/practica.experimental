@@ -1,8 +1,4 @@
 def ejecutar():
-
-    print("Bloque 2")
-    print("Ejercicio 1")
-
     print("DECLARACIÓN DE VARIABLES SIMPLES Y COMPUESTAS")
 
     entero = 19
