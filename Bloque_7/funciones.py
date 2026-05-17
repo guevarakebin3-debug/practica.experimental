@@ -6,7 +6,6 @@ def ejecutar():
     def sumar_varios(*numeros):
         return sum(numeros)
 
-    print("Bloque 7")
     print("Ejercicio 1")
     print("Calcular el doble de un número")
 
