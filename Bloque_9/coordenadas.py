@@ -1,6 +1,5 @@
 def ejecutar():
-
-    print("Bloque 9")
+    
     print("Ejercicio 3")
     print("Lista de coordenadas")
 
