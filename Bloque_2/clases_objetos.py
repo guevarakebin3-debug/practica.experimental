@@ -1,8 +1,4 @@
 def ejecutar():
-
-    print("Bloque 2")
-    print("Ejercicio 2")
-
     print("Ejemplo de listas")
 
     lista = [1, 2, 3, 4, 5]
