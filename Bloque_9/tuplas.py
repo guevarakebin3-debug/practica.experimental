@@ -19,6 +19,7 @@ def ejecutar():
 
     print("\nEjercicio 2")
     print("Uso del unpacking (a, b, resto)")
+    print("(100, 200, 300, 400)")
 
     a, b, *resto = (100, 200, 300, 400)
 
@@ -27,7 +28,7 @@ def ejecutar():
     print("resto =", resto)
 
     print("\nEjercicio adicional")
-    print("Primer y último elemento de una tupla")
+    print("Muestra el primer y último elemento de una tupla")
 
     valor1 = input("Ingrese el primer valor: ")
     valor2 = input("Ingrese el segundo valor: ")
