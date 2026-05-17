@@ -1,11 +1,4 @@
 def ejecutar():
-
-    print("Bloque 6")
-
-    # =====================================
-    # EJERCICIO 1
-    # =====================================
-
     print("\nEjercicio 1")
     print("Imprime números del 1 al 10")
 
@@ -15,10 +8,8 @@ def ejecutar():
         print(contador)
         contador += 1
 
-    # =====================================
-    # EJERCICIO 2
-    # =====================================
 
+    
     print("\nEjercicio 2")
     print("Enumerate con frutas")
 
@@ -27,9 +18,9 @@ def ejecutar():
     for indice, fruta in enumerate(frutas):
         print(indice, fruta)
 
-    # =====================================
-    # EJERCICIO 3
-    # =====================================
+
+
+    
 
     print("\nEjercicio 3")
     print("Cuadrados pares entre 1 y 10")
