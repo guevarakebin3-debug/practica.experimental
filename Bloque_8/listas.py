@@ -1,13 +1,28 @@
 def ejecutar():
 
     print("Ejercicio 1")
-    print("Lista con 3 elementos y ordenamiento")
+    print("Lista ordenada con 3 elementos ")
 
     lista = []
 
     for i in range(3):
-        numero = int(input(f"Ingrese el número {i + 1}: "))
-        lista.append(numero)
+
+        # Validar número
+        while True:
+
+            entrada = input(f"Ingrese el número {i + 1}: ").strip()
+
+            if entrada == "":
+                print("❌ No puede estar vacío")
+                continue
+
+            try:
+                numero = int(entrada)
+                lista.append(numero)
+                break
+
+            except ValueError:
+                print("❌ Debe ingresar un número entero")
 
     print("Lista original:", lista)
 
