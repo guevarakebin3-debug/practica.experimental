@@ -1,14 +1,37 @@
 def ejecutar():
-
-    print("Bloque 10")
-
     print("Ejercicio 1")
     print("Crear un diccionario")
 
+    # Validar nombre (NO números)
+    while True:
+
+        nombre = input("Ingrese su nombre: ").strip()
+
+        if nombre.replace(" ", "").isalpha():
+            break
+        else:
+            print("❌ El nombre no puede contener números")
+
+    # Validar edad
+    while True:
+
+        try:
+            edad = int(input("Ingrese su edad: "))
+
+            if edad < 0:
+                print("❌ No puede ser negativa")
+            else:
+                break
+
+        except ValueError:
+            print("❌ Debe ingresar un número entero")
+
+    ciudad = input("Ingrese su ciudad: ").strip()
+
     persona = {
-        "nombre": input("Ingrese su nombre: "),
-        "edad": int(input("Ingrese su edad: ")),
-        "ciudad": input("Ingrese su ciudad: "),
+        "nombre": nombre,
+        "edad": edad,
+        "ciudad": ciudad,
     }
 
     print("\n--- Acceso con [] ---")
@@ -25,10 +48,41 @@ def ejecutar():
     print("\nEjercicio 2")
     print("Mostrar claves y valores")
 
+    # Validar segunda persona
+    while True:
+
+        nombre = input("Ingrese su nombre: ").strip()
+
+        if nombre.replace(" ", "").isalpha():
+            break
+        else:
+            print("❌ El nombre no puede contener números")
+
+    while True:
+
+        try:
+            edad = int(input("Ingrese su edad: "))
+
+            if edad < 0:
+                print("❌ No puede ser negativa")
+            else:
+                break
+
+        except ValueError:
+            print("❌ Debe ingresar un número entero")
+
+    ciudad = input("Ingrese su ciudad: ").strip()
+
     persona = {
-        "nombre": input("Ingrese su nombre: "),
-        "edad": int(input("Ingrese su edad: ")),
-        "ciudad": input("Ingrese su ciudad: ")
+        "nombre": nombre,
+        "edad": edad,
+        "ciudad": ciudad
+    }
+
+    print("\n--- Claves y valores ---")
+
+    for clave, valor in persona.items():
+        print(clave, ":", valor)
     }
 
     print("\n--- Claves y valores ---")
