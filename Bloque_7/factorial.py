@@ -6,8 +6,7 @@ def ejecutar():
             return 1
 
         return n * factorial(n - 1)
-
-    print("Bloque 7")
+        
     print("Ejercicio 3")
     print("Calcular factorial recursivo")
 
