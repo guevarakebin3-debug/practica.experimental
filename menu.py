@@ -84,7 +84,8 @@ def mostrar_menu(titulo, opciones):
 
             limpiar()
             accion()
-             input("\nPresione ENTER para volver al menú...")
+            input("\nPresione ENTER para volver al menú...")
+        
 
         else:
 
