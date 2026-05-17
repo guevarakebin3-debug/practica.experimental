@@ -1,8 +1,6 @@
 def ejecutar():
 
-    print("Bloque 13 - Decoradores básicos")
-
-    print("Ejercicio 1 - Decorador simple")
+    print("Decorador simple")
 
     def decorador(func):
         def wrapper():
@@ -18,7 +16,7 @@ def ejecutar():
     saludar()
 
 
-    print("\nEjercicio 2 - Decorador con validación")
+    print(" Decorador para calcular el cuadrado con validación")
 
     def validar_positivo(func):
         def wrapper(n):
