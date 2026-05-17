@@ -1,14 +1,12 @@
 def ejecutar():
 
-    print("Bloque 13 - Decoradores avanzados")
-
-    print("Ejercicio 3 - Decorador log")
+    print("Decorador de registro (log de ejecución)")
 
     def log(func):
         def wrapper(*args, **kwargs):
-            print("Ejecutando función...")
+            print(" Iniciando ejecución de la función...")
             resultado = func(*args, **kwargs)
-            print("Función terminada")
+            print("Ejecución finalizada")
             return resultado
         return wrapper
 
@@ -21,13 +19,13 @@ def ejecutar():
     print("Resultado:", suma(2, 3))
 
 
-    print("\nEjercicio adicional - Decorador interactivo")
+    print("Decorador con entrada interactiva y multiplicación")
 
     def decorador(func):
         def wrapper(*args, **kwargs):
-            print("Antes de la función")
+            print("Antes de ejecutar la función")
             resultado = func(*args, **kwargs)
-            print("Después de la función")
+            print("Después de ejecutar la función")
             return resultado
         return wrapper
 
@@ -37,7 +35,15 @@ def ejecutar():
         return a * b
 
 
-    a = int(input("Ingrese el primer número: "))
-    b = int(input("Ingrese el segundo número: "))
+    # 🔥 VALIDACIÓN AQUÍ
+    while True:
+        try:
+            a = int(input("Ingrese el primer número: "))
+            b = int(input("Ingrese el segundo número: "))
 
-    print("Resultado:", multiplicar(a, b))
+            resultado = multiplicar(a, b)
+            print("Resultado:", resultado)
+            break
+
+        except ValueError:
+            print(" Error: debe ingresar números válidos")
