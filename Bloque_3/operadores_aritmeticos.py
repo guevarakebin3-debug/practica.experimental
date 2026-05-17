@@ -1,8 +1,7 @@
 def ejecutar():
 
-    print("=== BLOQUE 3 ===")
-    print("Ejercicio 1")
-    print("Operadores aritméticos y resultados")
+   print("Operadores aritméticos y resultados")
+   print("a = 20  b = 4 ")
 
     a = 20
     b = 4
@@ -26,7 +25,8 @@ def ejecutar():
     print("a is b:", a is b)
     print("a is c:", a is c)
 
-    print("\nEjercicio 2")
+    print("Ejercicio 2")
+    print("Orden de evaluación")
     print("x = 2 + 1 * 2 % 2 + (2**1)//2")
 
     x = 2 + 1 * 2 % 2 + (2**1)//2
