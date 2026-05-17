@@ -9,9 +9,8 @@ class Persona:
 
 
 def ejecutar():
-
-    print("Descripción:")
-    print("Crear una clase Persona y tres objetos.\n")
+    
+    print("Crear una clase Persona y tres objetos.")
 
     persona1 = Persona("Carlos", 20)
     persona2 = Persona("Ana", 25)
