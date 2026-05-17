@@ -14,13 +14,28 @@ def ejecutar():
     print("Copia:", copia)
 
     print("\nEjercicio adicional")
-    print("Eliminación y análisis")
+    print("Eliminacion, numero max y min de una lista")
 
     numeros = []
 
     for i in range(3):
-        numero = int(input(f"Ingrese el número {i + 1}: "))
-        numeros.append(numero)
+
+        # Validar número
+        while True:
+
+            entrada = input(f"Ingrese el número {i + 1}: ").strip()
+
+            if entrada == "":
+                print("❌ No puede estar vacío")
+                continue
+
+            try:
+                numero = int(entrada)
+                numeros.append(numero)
+                break
+
+            except ValueError:
+                print("❌ Debe ingresar un número entero")
 
     print("\nLista original:", numeros)
 
