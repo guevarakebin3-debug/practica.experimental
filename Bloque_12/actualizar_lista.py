@@ -1,6 +1,5 @@
 def ejecutar():
 
-
     print("Ejercicio adicional")
     print("Actualizar lista con manejo de IndexError")
 
@@ -8,13 +7,19 @@ def ejecutar():
 
     print("Lista:", lista)
 
-    try:
-        pos = int(input("Ingrese la posición (0-2): "))
-        nuevo_valor = int(input("Ingrese el nuevo valor: "))
+    while True:
 
-        lista[pos] = nuevo_valor
+        try:
+            pos = int(input("Ingrese la posición (0-2): "))
+            nuevo_valor = int(input("Ingrese el nuevo valor: "))
 
-        print("Lista actualizada:", lista)
+            lista[pos] = nuevo_valor
 
-    except IndexError:
-        print("Error: esa posición no existe en la lista")
+            print("Lista actualizada:", lista)
+            break  # sale si todo está bien
+
+        except ValueError:
+            print("❌ Error: debes ingresar solo números")
+
+        except IndexError:
+            print("❌ Error: esa posición no existe en la lista")
