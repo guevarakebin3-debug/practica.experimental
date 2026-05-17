@@ -10,7 +10,7 @@ class Producto:
 
 
 def ejecutar():
-
+    print("Crear un producto y validar el precio")
     print("Ingrese los datos del producto 1")
 
     codigo1 = input("Código: ")
