@@ -8,8 +8,8 @@ python main.py
 Seleccionar el número del bloque deseado en el menú.
 Estructura del menú
 main.py crea una instancia de menu y llama a optionMenu().
-views/menu.py define la clase Menu con el método show_menu y la lista de opciones.
-Cada opción del menú llama a la función start, start_one, start_two, ..., start_seventeen de su bloque correspondiente.
+views/menu.py define la clase Menu con el método mostrar_menu y la lista de opciones.
+Cada opción del menú llama a la función bloque_0, bloque_1, bloque_2, ..., de su bloque correspondiente.
 Menú general
 El menú principal muestra todos los bloques del 0 al 17 y una opción para salir. Cada bloque describe brevemente qué tipo de ejercicios se ejecutan.
 
@@ -20,14 +20,14 @@ Escribe el número correspondiente al bloque que deseas ejecutar y presiona Ente
 Cada bloque mostrará instrucciones y ejemplos dentro de la consola.
 Al terminar un bloque, presiona Enter para volver al menú principal.
 Bloques y su funcionalidad
-Bloque 0 - Personas
-Archivo: bloque_00/person.py
-Función: start()
-Contenido: definición de la clase Person, creación de objetos y presentación de atributos.
+Bloque 0 - Persona
+Archivo: bloque_0/persona.py
+Función: ejecutar()
+Contenido: definición de la clase Persona, creación de objetos y presentación de atributos.
 Objetivo: entender clases, objetos y métodos simples.
 Bloque 1 - Productos y estudiantes
-Archivo: bloque_01/product_student.py
-Función: start_one()
+Archivo: bloque_01/producto_estudiante.py
+Función: bloque_2()
 Contenido: definición de clases Product y Student, manejo de validación de precios, y creación de objetos desde diccionarios.
 Objetivo: practicar clases, validaciones y métodos de clase.
 Bloque 2 - Variables
