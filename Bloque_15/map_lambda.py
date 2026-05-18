@@ -1,14 +1,9 @@
 def ejecutar():
 
     print("Bloque 15 - map + lambda")
+    print("Incrementa en 1 cada elemento de la lista usando map")
 
-    print("Ejercicio 1 - Incrementa en 1 cada elemento de la lista")
-
-    numeros = []
-
-    for i in range(3):
-        num = int(input(f"Ingrese número {i + 1}: "))
-        numeros.append(num)
+    numeros = [2, 4, 6]
 
     resultado = list(map(lambda x: x + 1, numeros))
 
