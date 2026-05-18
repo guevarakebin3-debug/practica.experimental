@@ -1,4 +1,5 @@
 def ejecutar():
+
     print("Solicitud de nombre y edad")
 
     # Validar nombre
@@ -8,9 +9,12 @@ def ejecutar():
 
         if nombre == "":
             print("❌ El nombre no puede estar vacío")
+
+        elif not nombre.isalpha():
+            print("❌ El nombre solo debe contener letras")
+
         else:
             break
-
     # Validar edad
     while True:
 
