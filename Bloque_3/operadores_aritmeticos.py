@@ -1,7 +1,7 @@
 def ejecutar():
 
-   print("Operadores aritméticos y resultados")
-   print("a = 20  b = 4 ")
+    print("Operadores aritméticos y resultados")
+    print("a = 20  b = 4 ")
 
     a = 20
     b = 4
@@ -32,6 +32,13 @@ def ejecutar():
     x = 2 + 1 * 2 % 2 + (2**1)//2
 
     print("Respuesta:", x)
+
+    print("\nOrden de evaluación:")
+    print("1. Paréntesis y potencia")
+    print("2. Multiplicación")
+    print("3. Módulo")
+    print("4. División entera")
+    print("5. Sumas y restas")
 
     print("\nOrden de evaluación:")
     print("1. Paréntesis y potencia")
