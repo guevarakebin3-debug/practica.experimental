@@ -1,7 +1,6 @@
 def ejecutar():
 
-    print("Bloque 16")
-    print("Ejercicio 1 - Archivos")
+    print("Archivos py")
 
     while True:
         texto = input("Escribe 'Python': ")
