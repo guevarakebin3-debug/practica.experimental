@@ -1,4 +1,3 @@
-
 class Persona:
     def __init__(self, nombre, edad):
         self.nombre = nombre
@@ -9,8 +8,9 @@ class Persona:
 
 
 def ejecutar():
-    
-    print("Crear una clase Persona y tres objetos.")
+
+    print("Descripción:")
+    print("Crear una clase Persona y tres objetos.\n")
 
     persona1 = Persona("Carlos", 20)
     persona2 = Persona("Ana", 25)
