@@ -1,6 +1,6 @@
 def ejecutar():
 
-     print(" Obtener números mayores a 3 usando filter")
+    print("Obtener números mayores a 3 usando filter")
 
     numeros = [1, 2, 3, 4, 5]
 
