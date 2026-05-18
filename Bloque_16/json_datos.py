@@ -1,8 +1,6 @@
 def ejecutar():
 
-    print("Bloque 16")
-
-    print("Ejercicio 2 - JSON")
+    print(" JSON")
 
     import json
 
@@ -20,28 +18,32 @@ def ejecutar():
     print("Valor de x:", cargado["x"])
 
 
-    print("\nEjercicio 3 - Lista JSON interactiva")
+    print("\n Lista JSON interactiva")
+usuarios = []
 
-    usuarios = []
+for i in range(2):
+    print(f"\nUsuario {i + 1}")
 
-    for i in range(2):
-        print(f"\nUsuario {i + 1}")
-        nombre = input("Ingrese nombre: ")
-        edad = int(input("Ingrese edad: "))
+    nombre = input("Ingrese nombre: ")
 
-        usuarios.append({
-            "nombre": nombre,
-            "edad": edad
-        })
+    while True:
+        try:
+            edad = int(input("Ingrese edad: "))
+            break
+        except ValueError:
+            print("Error: la edad debe ser un número entero.")
 
-    # GUARDAR EN JSON
-    with open("usuarios.json", "w") as f:
-        json.dump(usuarios, f, indent=2)
+    usuarios.append({
+        "nombre": nombre,
+        "edad": edad
+    })
 
-    # LEER JSON
-    with open("usuarios.json", "r") as f:
-        data = json.load(f)
+with open("usuarios.json", "w") as f:
+    json.dump(usuarios, f, indent=2)
 
-    print("\n--- USUARIOS GUARDADOS ---")
-    for u in data:
-        print("Nombre:", u["nombre"], "- Edad:", u["edad"])
+with open("usuarios.json", "r") as f:
+    data = json.load(f)
+
+print("\n--- USUARIOS GUARDADOS ---")
+for u in data:
+    print("Nombre:", u["nombre"], "- Edad:", u["edad"])
