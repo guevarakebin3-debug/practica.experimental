@@ -1,16 +1,10 @@
 def ejecutar():
 
-    print("Bloque 15 - filter + lambda")
+     print(" Obtener números mayores a 3 usando filter")
 
-    print("Ejercicio 2 - Obtener números mayores a 3")
-
-    numeros = []
-
-    for i in range(3):
-        num = int(input(f"Ingrese número {i + 1}: "))
-        numeros.append(num)
+    numeros = [1, 2, 3, 4, 5]
 
     resultado = list(filter(lambda x: x > 3, numeros))
 
-    print("\nLista original:", numeros)
+    print("Lista original:", numeros)
     print("Mayores a 3:", resultado)
