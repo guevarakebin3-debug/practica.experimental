@@ -27,8 +27,8 @@ Contenido: definición de la clase Persona, creación de objetos y presentación
 Objetivo: entender clases, objetos y métodos simples.
 Bloque 1 - Productos y estudiantes
 Archivo: bloque_01/producto_estudiante.py
-Función: bloque_2()
-Contenido: definición de clases Product y Student, manejo de validación de precios, y creación de objetos desde diccionarios.
+Función: ejecutar()
+Contenido: definición de clases Producto y estudiante, manejo de validación de precios, y creación de objetos desde diccionarios.
 Objetivo: practicar clases, validaciones y métodos de clase.
 Bloque 2 - Variables
 Archivo: bloque_02/variable.py
