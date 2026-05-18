@@ -20,15 +20,53 @@ class Reporte(ExportarMixin):
 
 def ejecutar():
 
-    print("Bloque 17 - ExportarMixin")
+    print("📦 Registro de productos")
 
-    datos = []
+    productos = []
 
-    cantidad = int(input("¿Cuántos datos deseas ingresar?: "))
+    # 🔹 VALIDACIÓN DE CANTIDAD
+    while True:
+        try:
+            cantidad = int(input("¿Cuántos productos deseas ingresar?: "))
 
+            if cantidad <= 0:
+                print("❌ Debes ingresar un número mayor a 0")
+            else:
+                break
+
+        except ValueError:
+            print("❌ Debes ingresar un número entero válido")
+
+    # 🔹 INGRESO DE PRODUCTOS
     for i in range(cantidad):
-        dato = input(f"Ingrese dato {i + 1}: ")
-        datos.append(dato)
 
+        print(f"\nProducto {i + 1}")
+
+        # Validar nombre
+        while True:
+            nombre = input("Nombre del producto: ").strip()
+            if nombre == "":
+                print("❌ El nombre no puede estar vacío")
+            else:
+                break
+
+        # Validar precio
+        while True:
+            try:
+                precio = float(input("Precio del producto: "))
+                if precio < 0:
+                    print("❌ El precio no puede ser negativo")
+                else:
+                    break
+            except ValueError:
+                print("❌ Debes ingresar un número válido")
+
+        productos.append({
+            "nombre": nombre,
+            "precio": precio
+        })
+
+    # 🔹 EXPORTAR
     reporte = Reporte()
-    reporte.mostrar_exportaciones(datos)
+    reporte.mostrar_exportaciones(productos)
+
