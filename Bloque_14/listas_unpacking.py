@@ -1,14 +1,8 @@
 def ejecutar():
 
-    print("Bloque 14 - Unpacking en listas")
+    print("Unpacking de listas")
 
-    print("Ejercicio 1 - Unpacking")
-
-    numeros = []
-
-    for i in range(4):
-        num = int(input(f"Ingrese número {i + 1}: "))
-        numeros.append(num)
+    numeros = (10, 20, 30, 40)
 
     primera, *mitad, ultima = numeros
 
@@ -18,18 +12,17 @@ def ejecutar():
     print("Ultima:", ultima)
 
 
-    print("\nEjercicio 2 - Multiplicar con unpacking")
+
+
+    print("\nUso de * en funciones")
 
     def multiplicar(a, b, c):
         return a * b * c
 
-    lista = []
-
-    for i in range(3):
-        num = int(input(f"Ingrese número {i + 1}: "))
-        lista.append(num)
+    lista = [2, 3, 4]
 
     resultado = multiplicar(*lista)
 
     print("Lista:", lista)
     print("Resultado:", resultado)
+
