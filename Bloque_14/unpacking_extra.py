@@ -1,14 +1,17 @@
 def ejecutar():
 
-    print("Bloque 14 - Unpacking avanzado")
-
-    print("Ejercicio adicional")
+    print("Ejercicio adicional_ Unpacking de una lista")
 
     numeros = []
 
     for i in range(4):
-        num = int(input(f"Ingrese número {i + 1}: "))
-        numeros.append(num)
+        while True:
+            try:
+                num = int(input(f"Ingrese número {i + 1}: "))
+                numeros.append(num)
+                break
+            except ValueError:
+                print("Error: debe ingresar un número entero válido.")
 
     primero, *medio, ultimo = numeros
 
