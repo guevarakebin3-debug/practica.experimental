@@ -83,9 +83,3 @@ def ejecutar():
 
     for clave, valor in persona.items():
         print(clave, ":", valor)
-    
-
-    print("\n--- Claves y valores ---")
-
-    for clave, valor in persona.items():
-        print(clave, ":", valor)
