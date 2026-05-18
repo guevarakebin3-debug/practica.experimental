@@ -1,17 +1,15 @@
 def ejecutar():
 
-    print("Bloque 14 - Unpacking de diccionarios")
-
-    print("Ejercicio 3 - Unpacking de diccionarios")
+    print("Combinación de 2 diccionarios usando **")
 
     dict1 = {
-        "nombre": input("Ingrese su nombre: "),
-        "edad": int(input("Ingrese su edad: "))
+        "nombre": "Juan",
+        "edad": 20
     }
 
     dict2 = {
-        "ciudad": input("Ingrese su ciudad: "),
-        "pais": input("Ingrese su país: ")
+        "ciudad": "Milagro",
+        "pais": "Ecuador"
     }
 
     combinado = {**dict1, **dict2}
