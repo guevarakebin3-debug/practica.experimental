@@ -1,22 +1,23 @@
-class Persona:
-    def __init__(self, nombre, edad):
-        self.nombre = nombre
-        self.edad = edad
+class Person:
 
-    def mostrar(self):
-        return f"Nombre: {self.nombre} | Edad: {self.edad}"
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def show(self):
+        return f"Name: {self.name} | Age: {self.age}"
 
 
-def ejecutar():
+def run():
 
-    print("Descripción:")
-    print("Crear una clase Persona y tres objetos.\n")
+    print("Create a Person class and three objects.\n")
 
-    persona1 = Persona("Carlos", 20)
-    persona2 = Persona("Ana", 25)
-    persona3 = Persona("Luis", 30)
+    person1 = Person("Carlos", 20)
+    person2 = Person("Ana", 25)
+    person3 = Person("Luis", 30)
 
-    print("Datos registrados:")
-    print(persona1.mostrar())
-    print(persona2.mostrar())
-    print(persona3.mostrar())
+    print("Registered data:")
+
+    print(person1.show())
+    print(person2.show())
+    print(person3.show())
