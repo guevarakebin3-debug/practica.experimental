@@ -10,7 +10,7 @@ def run():
         if name.replace(" ", "").isalpha():
             break
         else:
-            print("El nombre no puede contener números")
+            print("❌ El nombre no puede contener números")
 
     # Validar edad
     while True:
@@ -19,12 +19,12 @@ def run():
             age = int(input("Ingrese su edad: "))
 
             if age < 0:
-                print("No puede ser negativa")
+                print("❌ No puede ser negativa")
             else:
                 break
 
         except ValueError:
-            print("Debe ingresar un número entero")
+            print("❌ Debe ingresar un número entero")
 
     city = input("Ingrese su ciudad: ").strip()
 
@@ -55,7 +55,7 @@ def run():
         if name.replace(" ", "").isalpha():
             break
         else:
-            print("El nombre no puede contener números")
+            print("❌ El nombre no puede contener números")
 
     while True:
 
@@ -63,12 +63,12 @@ def run():
             age = int(input("Ingrese su edad: "))
 
             if age < 0:
-                print("No puede ser negativa")
+                print("❌ No puede ser negativa")
             else:
                 break
 
         except ValueError:
-            print("Debe ingresar un número entero")
+            print("❌ Debe ingresar un número entero")
 
     city = input("Ingrese su ciudad: ").strip()
 
