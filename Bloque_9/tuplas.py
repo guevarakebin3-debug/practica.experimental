@@ -1,42 +1,40 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio 1")
     print("Crea una tupla e intenta modificarla")
 
-    elemento1 = input("Ingrese el primer valor: ")
-    elemento2 = input("Ingrese el segundo valor: ")
+    element1 = input("Ingrese el primer valor: ")
+    element2 = input("Ingrese el segundo valor: ")
 
-    tupla = (elemento1, elemento2)
+    tuple_data = (element1, element2)
 
-    print("\nTupla original:", tupla)
+    print("\nTupla original:", tuple_data)
 
-    nuevo_valor = input("Ingrese el nuevo valor para modificar la posición 0: ")
+    new_value = input("Ingrese el nuevo valor para modificar la posición 0: ")
 
     try:
-        tupla[0] = nuevo_valor
+        tuple_data[0] = new_value
     except TypeError:
-        print("\nError: las tuplas no se pueden modificar")
+        print("❌\nError: las tuplas no se pueden modificar")
 
     print("\nEjercicio 2")
     print("Uso del unpacking (a, b, resto)")
     print("(100, 200, 300, 400)")
 
-    a, b, *resto = (100, 200, 300, 400)
+    a, b, *rest = (100, 200, 300, 400)
 
     print("a =", a)
     print("b =", b)
-    print("resto =", resto)
+    print("resto =", rest)
 
-    print("\nEjercicio adicional")
-    print("Muestra el primer y último elemento de una tupla")
+    print("\nEjercicio adicional: muestra el primer y último elemento de una tupla")
 
-    valor1 = input("Ingrese el primer valor: ")
-    valor2 = input("Ingrese el segundo valor: ")
-    valor3 = input("Ingrese el tercer valor: ")
+    value1 = input("Ingrese el primer valor: ")
+    value2 = input("Ingrese el segundo valor: ")
+    value3 = input("Ingrese el tercer valor: ")
 
-    tupla2 = (valor1, valor2, valor3)
+    tuple2 = (value1, value2, value3)
 
-    print("\nTupla:", tupla2)
+    print("\nTupla:", tuple2)
 
-    print("Primer elemento:", tupla2[0])
-    print("Último elemento:", tupla2[-1])
+    print("Primer elemento:", tuple2[0])
+    print("Último elemento:", tuple2[-1])
