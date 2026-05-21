@@ -1,37 +1,35 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio 1")
-    print("Lista ordenada con 3 elementos ")
+    print("Lista ordenada con 3 elementos")
 
-    lista = []
+    numbers_list = []
 
     for i in range(3):
 
         # Validar número
         while True:
 
-            entrada = input(f"Ingrese el número {i + 1}: ").strip()
+            entry = input(f"Ingrese el número {i + 1}: ").strip()
 
-            if entrada == "":
+            if entry == "":
                 print("❌ No puede estar vacío")
                 continue
 
             try:
-                numero = int(entrada)
-                lista.append(numero)
+                number = int(entry)
+                numbers_list.append(number)
                 break
 
             except ValueError:
                 print("❌ Debe ingresar un número entero")
 
-    print("Lista original:", lista)
+    print("Lista original:", numbers_list)
 
-    lista.sort()
+    numbers_list.sort()
 
-    print("Lista ordenada:", lista)
+    print("Lista ordenada:", numbers_list)
 
-    print("\nEjercicio 2")
-    print("Suma, máximo y mínimo")
+    print("\nSuma, máximo y mínimo")
 
     nums = [5, 3, 8, 1, 9, 3]
 
