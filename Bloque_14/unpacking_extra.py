@@ -1,24 +1,24 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio adicional_ Unpacking de una lista")
+    print("Ejercicio adicional: Unpacking de una lista")
 
-    numeros = []
+    numbers_list = []
 
     for i in range(4):
         while True:
             try:
                 num = int(input(f"Ingrese número {i + 1}: "))
-                numeros.append(num)
+                numbers_list.append(num)
                 break
             except ValueError:
-                print("Error: debe ingresar un número entero válido.")
+                print("❌ Error: debe ingresar un número entero válido.")
 
-    primero, *medio, ultimo = numeros
+    first, *middle, last = numbers_list
 
-    suma_medio = sum(medio)
+    middle_sum = sum(middle)
 
-    print("\nLista completa:", numeros)
-    print("Primero:", primero)
-    print("Medio:", medio)
-    print("Ultimo:", ultimo)
-    print("Suma del medio:", suma_medio)
+    print("\nLista completa:", numbers_list)
+    print("Primero:", first)
+    print("Medio:", middle)
+    print("Último:", last)
+    print("Suma del medio:", middle_sum)
