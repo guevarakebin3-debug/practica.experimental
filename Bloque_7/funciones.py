@@ -1,49 +1,47 @@
-def ejecutar():
+def run():
 
-    def doble(x):
+    def double(x):
         return x * 2
 
-    def sumar_varios(*numeros):
-        return sum(numeros)
+    def sum_multiple(*numbers):
+        return sum(numbers)
 
-    print("Ejercicio 1")
     print("Calcular el doble de un número")
 
     # Validar número
     while True:
 
-        entrada = input("Ingrese un número: ").strip()
+        entry = input("Ingrese un número: ").strip()
 
-        if entrada == "":
+        if entry == "":
             print("❌ No puede estar vacío")
             continue
 
         try:
-            numero = int(entrada)
+            number = int(entry)
             break
 
         except ValueError:
             print("❌ Debe ingresar un número entero")
 
-    print("El doble es:", doble(numero))
+    print("El doble es:", double(number))
 
-    print("\nEjercicio 2")
-    print("Suma de varios números")
+    print("\nSuma de varios números")
 
     # Validar cantidad
     while True:
 
-        entrada = input("¿Cuántos números desea ingresar?: ").strip()
+        entry = input("¿Cuántos números desea ingresar?: ").strip()
 
-        if entrada == "":
+        if entry == "":
             print("❌ No puede estar vacío")
             continue
 
         try:
 
-            cantidad = int(entrada)
+            quantity = int(entry)
 
-            if cantidad <= 0:
+            if quantity <= 0:
                 print("❌ Debe ingresar una cantidad mayor a 0")
                 continue
 
@@ -52,28 +50,28 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar números enteros")
 
-    lista_numeros = []
+    numbers_list = []
 
     # Validar números de la lista
-    for i in range(cantidad):
+    for i in range(quantity):
 
         while True:
 
-            entrada = input(f"Ingrese el número {i + 1}: ").strip()
+            entry = input(f"Ingrese el número {i + 1}: ").strip()
 
-            if entrada == "":
-                print("❌ No puede estar vacío")
+            if entry == "":
+                print("❌  No puede estar vacío")
                 continue
 
             try:
 
-                numero = float(entrada)
-                lista_numeros.append(numero)
+                number = float(entry)
+                numbers_list.append(number)
                 break
 
             except ValueError:
-                print("❌ Debe ingresar un número válido")
+                print("❌  Debe ingresar un número válido")
 
-    resultado = sumar_varios(*lista_numeros)
+    result = sum_multiple(*numbers_list)
 
-    print("La suma total es:", resultado)
+    print("La suma total es:", result)
