@@ -10,11 +10,11 @@ def run():
         try:
             size_a = int(input("¿Cuántos números tendrá el conjunto A?: "))
             if size_a < 0:
-                print("No puede ser negativo")
+                print("❌ No puede ser negativo")
             else:
                 break
         except ValueError:
-            print("Debe ingresar un número entero")
+            print("❌ Debe ingresar un número entero")
 
     # Llenar A
     for i in range(size_a):
@@ -25,18 +25,18 @@ def run():
                 set_a.add(num)
                 break
             except ValueError:
-                print("Debe ingresar un número entero")
+                print("❌ Debe ingresar un número entero")
 
     # Validar cantidad B
     while True:
         try:
             size_b = int(input("\n¿Cuántos números tendrá el conjunto B?: "))
             if size_b < 0:
-                print("No puede ser negativo")
+                print("❌ No puede ser negativo")
             else:
                 break
         except ValueError:
-            print("Debe ingresar un número entero")
+            print("❌ Debe ingresar un número entero")
 
     # Llenar B
     for i in range(size_b):
@@ -47,7 +47,7 @@ def run():
                 set_b.add(num)
                 break
             except ValueError:
-                print("Debe ingresar un número entero")
+                print("❌ Debe ingresar un número entero")
 
     print("\nConjunto A:", set_a)
     print("Conjunto B:", set_b)
