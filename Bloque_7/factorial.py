@@ -1,4 +1,4 @@
-def ejecutar():
+def run():
 
     def factorial(n):
 
@@ -6,25 +6,24 @@ def ejecutar():
             return 1
 
         return n * factorial(n - 1)
-        
-    print("Ejercicio 3")
+
     print("Calcular factorial recursivo")
 
     # Validar número
     while True:
 
-        entrada = input("Ingrese un número: ").strip()
+        entry = input("Ingrese un número: ").strip()
 
-        if entrada == "":
-            print("❌ No puede estar vacío")
+        if entry == "":
+            print("No puede estar vacío")
             continue
 
         try:
 
-            numero = int(entrada)
+            number = int(entry)
 
-            if numero < 0:
-                print("❌ No se permite números negativos")
+            if number < 0:
+                print("No se permite números negativos")
                 continue
 
             break
@@ -32,4 +31,4 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar un número entero")
 
-    print("El factorial es:", factorial(numero))
+    print("El factorial es:", factorial(number))
