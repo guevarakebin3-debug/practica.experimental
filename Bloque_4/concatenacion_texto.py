@@ -1,4 +1,4 @@
-def ejecutar():
+def run():
     print("Concatenación de texto con el número 5")
 
     while True:
@@ -9,6 +9,6 @@ def ejecutar():
             break
 
         else:
-            print("❌ Debe ingresar solo números")
+            print("Debe ingresar solo números")
 
     print(numero + "5")
