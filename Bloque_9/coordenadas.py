@@ -1,17 +1,16 @@
-def ejecutar():
-    
-    print("Ejercicio 3")
+def run():
+
     print("Lista de coordenadas")
 
-    coordenadas = []
+    coordinates = []
 
     # Validar cantidad de coordenadas
     while True:
 
         try:
-            cantidad = int(input("¿Cuántas coordenadas desea ingresar?: "))
+            quantity = int(input("¿Cuántas coordenadas desea ingresar?: "))
 
-            if cantidad <= 0:
+            if quantity <= 0:
                 print("❌ Debe ser mayor a 0")
                 continue
 
@@ -20,7 +19,7 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar un número entero")
 
-    for i in range(cantidad):
+    for i in range(quantity):
 
         # Validar X
         while True:
@@ -38,9 +37,9 @@ def ejecutar():
             except ValueError:
                 print("❌ Debe ingresar un número válido")
 
-        coordenadas.append((x, y))
+        coordinates.append((x, y))
 
     print("\nCoordenadas ingresadas:")
 
-    for x, y in coordenadas:
+    for x, y in coordinates:
         print(f"x = {x}, y = {y}")
