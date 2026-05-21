@@ -1,4 +1,4 @@
-def ejecutar():
+def run():
 
     print("Operadores aritméticos y resultados")
     print("a = 20  b = 4 ")
