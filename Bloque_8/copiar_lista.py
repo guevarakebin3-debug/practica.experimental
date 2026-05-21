@@ -1,47 +1,44 @@
-def ejecutar():
+def run():
 
-    print("Bloque 8")
-    print("Ejercicio 3")
     print("Copia de listas y referencias")
 
-    lista = [1, 2, 3]
+    numbers_list = [1, 2, 3]
 
-    copia = lista
+    copy_list = numbers_list
 
-    copia.append(4)
+    copy_list.append(4)
 
-    print("Lista original:", lista)
-    print("Copia:", copia)
+    print("Lista original:", numbers_list)
+    print("Copia:", copy_list)
 
-    print("\nEjercicio adicional")
-    print("Eliminacion, numero max y min de una lista")
+    print("\nEjercicio adicional: eliminación, número máximo y mínimo de una lista")
 
-    numeros = []
+    numbers = []
 
     for i in range(3):
 
         # Validar número
         while True:
 
-            entrada = input(f"Ingrese el número {i + 1}: ").strip()
+            entry = input(f"Ingrese el número {i + 1}: ").strip()
 
-            if entrada == "":
+            if entry == "":
                 print("❌ No puede estar vacío")
                 continue
 
             try:
-                numero = int(entrada)
-                numeros.append(numero)
+                number = int(entry)
+                numbers.append(number)
                 break
 
             except ValueError:
                 print("❌ Debe ingresar un número entero")
 
-    print("\nLista original:", numeros)
+    print("\nLista original:", numbers)
 
-    eliminado = numeros.pop()
+    removed = numbers.pop()
 
-    print("Último elemento eliminado:", eliminado)
+    print("Último elemento eliminado:", removed)
 
-    print("Número mayor:", max(numeros))
-    print("Número menor:", min(numeros))
+    print("Número mayor:", max(numbers))
+    print("Número menor:", min(numbers))
