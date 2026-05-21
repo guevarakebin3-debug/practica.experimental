@@ -1,10 +1,10 @@
-def ejecutar():
+def run():
 
     print("Obtener números mayores a 3 usando filter")
 
-    numeros = [1, 2, 3, 4, 5]
+    numbers = [1, 2, 3, 4, 5]
 
-    resultado = list(filter(lambda x: x > 3, numeros))
+    result = list(filter(lambda x: x > 3, numbers))
 
-    print("Lista original:", numeros)
-    print("Mayores a 3:", resultado)
+    print("Lista original:", numbers)
+    print("Mayores a 3:", result)
