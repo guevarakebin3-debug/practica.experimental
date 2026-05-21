@@ -1,21 +1,22 @@
-def ejecutar():
+def run():
+
     print("Nivel de rendimiento académico")
 
     while True:
 
-        entrada = input("Ingrese su nota: ").strip()
+        entry = input("Ingrese su nota: ").strip()
 
         # Vacío
-        if entrada == "":
+        if entry == "":
             print("❌ No puede estar vacío")
             continue
 
         try:
 
-            nota = int(entrada)
+            grade = int(entry)
 
             # Rango válido
-            if nota < 0 or nota > 100:
+            if grade < 0 or grade > 100:
                 print("❌ La nota debe estar entre 0 y 100")
                 continue
 
@@ -24,13 +25,13 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar números enteros")
 
-    if nota >= 90:
+    if grade >= 90:
         print("A")
 
-    elif nota >= 80:
+    elif grade >= 80:
         print("B")
 
-    elif nota >= 70:
+    elif grade >= 70:
         print("C")
 
     else:
