@@ -1,54 +1,60 @@
-class ValidacionMixin:
-    def validar_email(self, correo):
-        return "@" in correo and correo.endswith(".com")
+class ValidationMixin:
+    def validate_email(self, email):
+        return "@" in email and email.endswith(".com")
 
-    def validar_edad(self, edad):
-        return edad >= 18
+    def validate_age(self, age):
+        return age >= 18
 
 
-class Usuario(ValidacionMixin):
-    def registrar(self, nombre, edad, correo):
+class User(ValidationMixin):
+    def register(self, name, age, email):
 
-        if not self.validar_edad(edad):
-            print("❌ Edad inválida (debe ser mayor o igual a 18)")
-            print("🔁 Intenta registrarte nuevamente\n")
+        if not self.validate_age(age):
+            print("Edad inválida (debe ser mayor o igual a 18)")
+            print("Intenta registrarte nuevamente\n")
             return
 
-        if not self.validar_email(correo):
+        if not self.validate_email(email):
             print("❌ Correo inválido")
-            print("🔁 Intenta registrarte nuevamente\n")
+            print("❌ Intenta registrarte nuevamente\n")
             return
 
-        print("\n✅ Usuario registrado correctamente")
-        print("Nombre:", nombre)
-        print("Edad:", edad)
-        print("Correo:", correo)
+        print("\nUsuario registrado correctamente")
+        print("Nombre:", name)
+        print("Edad:", age)
+        print("Correo:", email)
 
 
-def ejecutar():
+def run():
 
-    usuario = Usuario()
+    user = User()
 
     while True:
 
         print("\n--- Registro ---")
 
-        nombre = input("Nombre: ")
-        edad = int(input("Edad: "))
+        name = input("Nombre: ")
 
-        if not usuario.validar_edad(edad):
-            print(" Edad inválida")
-            print("Debes registrarte nuevamente\n")
+        try:
+            age = int(input("Edad: "))
+        except ValueError:
+            print("❌ Edad inválida")
+            print("❌ Debes registrarte nuevamente\n")
             continue
 
-        correo = input("Correo: ")
-
-        if not usuario.validar_email(correo):
-            print(" Correo inválido")
-            print(" Debes registrarte nuevamente\n")
+        if not user.validate_age(age):
+            print("❌ Edad inválida")
+            print("❌ Debes registrarte nuevamente\n")
             continue
 
-        usuario.registrar(nombre, edad, correo)
+        email = input("Correo: ")
 
-        print("🎉 Proceso finalizado correctamente")
+        if not user.validate_email(email):
+            print("❌ Correo inválido")
+            print("❌ Debes registrarte nuevamente\n")
+            continue
+
+        user.register(name, age, email)
+
+        print("Proceso finalizado correctamente")
         break
