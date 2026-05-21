@@ -1,13 +1,12 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio 1")
-    print("ValueError")
+    print("ValueError al ingresar un número")
 
     while True:
 
         try:
-            numero = int(input("Ingrese un número: "))
-            print("Número ingresado:", numero)
+            number = int(input("Ingrese un número: "))
+            print("Número ingresado:", number)
             break  # sale si es válido
 
         except ValueError:
