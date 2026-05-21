@@ -1,21 +1,20 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio adicional")
-    print("Actualizar lista con manejo de IndexError")
+    print("Ejercicio adicional: actualizar lista con manejo de IndexError")
 
-    lista = [10, 20, 30]
+    numbers_list = [10, 20, 30]
 
-    print("Lista:", lista)
+    print("Lista:", numbers_list)
 
     while True:
 
         try:
-            pos = int(input("Ingrese la posición (0-2): "))
-            nuevo_valor = int(input("Ingrese el nuevo valor: "))
+            position = int(input("Ingrese la posición (0-2): "))
+            new_value = int(input("Ingrese el nuevo valor: "))
 
-            lista[pos] = nuevo_valor
+            numbers_list[position] = new_value
 
-            print("Lista actualizada:", lista)
+            print("Lista actualizada:", numbers_list)
             break  # sale si todo está bien
 
         except ValueError:
