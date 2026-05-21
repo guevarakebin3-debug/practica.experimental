@@ -9,6 +9,6 @@ def run():
             break
 
         else:
-            print("Debe ingresar solo números")
+            print("❌ Debe ingresar solo números")
 
     print(numero + "5")
