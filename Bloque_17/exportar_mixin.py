@@ -1,72 +1,74 @@
 import json
 
 
-class ExportarMixin:
-    def exportar_json(self, datos):
-        return json.dumps(datos, indent=2)
+class ExportMixin:
+    def export_json(self, data):
+        return json.dumps(data, indent=2)
 
-    def exportar_csv(self, datos):
-        return ",".join(str(d) for d in datos)
+    def export_csv(self, data):
+        return ",".join(str(d) for d in data)
 
 
-class Reporte(ExportarMixin):
-    def mostrar_exportaciones(self, datos):
+class Report:
+    def __init__(self):
+        self.mixin = ExportMixin()
+
+    def show_exports(self, data):
         print("\n--- JSON ---")
-        print(self.exportar_json(datos))
+        print(self.mixin.export_json(data))
 
         print("\n--- CSV ---")
-        print(self.exportar_csv(datos))
+        print(self.mixin.export_csv(data))
 
 
-def ejecutar():
+def run():
 
-    print("📦 Registro de productos")
+    print("Registro de productos")
 
-    productos = []
+    products = []
 
-    # 🔹 VALIDACIÓN DE CANTIDAD
+    # VALIDACIÓN DE CANTIDAD
     while True:
         try:
-            cantidad = int(input("¿Cuántos productos deseas ingresar?: "))
+            quantity = int(input("¿Cuántos productos deseas ingresar?: "))
 
-            if cantidad <= 0:
-                print("❌ Debes ingresar un número mayor a 0")
+            if quantity <= 0:
+                print("Debes ingresar un número mayor a 0")
             else:
                 break
 
         except ValueError:
-            print("❌ Debes ingresar un número entero válido")
+            print("Debes ingresar un número entero válido")
 
-    # 🔹 INGRESO DE PRODUCTOS
-    for i in range(cantidad):
+    # INGRESO DE PRODUCTOS
+    for i in range(quantity):
 
         print(f"\nProducto {i + 1}")
 
         # Validar nombre
         while True:
-            nombre = input("Nombre del producto: ").strip()
-            if nombre == "":
-                print("❌ El nombre no puede estar vacío")
+            name = input("Nombre del producto: ").strip()
+            if name == "":
+                print("El nombre no puede estar vacío")
             else:
                 break
 
         # Validar precio
         while True:
             try:
-                precio = float(input("Precio del producto: "))
-                if precio < 0:
-                    print("❌ El precio no puede ser negativo")
+                price = float(input("Precio del producto: "))
+                if price < 0:
+                    print("El precio no puede ser negativo")
                 else:
                     break
             except ValueError:
-                print("❌ Debes ingresar un número válido")
+                print("Debes ingresar un número válido")
 
-        productos.append({
-            "nombre": nombre,
-            "precio": precio
+        products.append({
+            "nombre": name,
+            "precio": price
         })
 
-    # 🔹 EXPORTAR
-    reporte = Reporte()
-    reporte.mostrar_exportaciones(productos)
-
+    # EXPORTAR
+    report = Report()
+    report.show_exports(products)
