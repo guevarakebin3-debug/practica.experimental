@@ -1,31 +1,31 @@
-def ejecutar():
+def run():
 
     print("Solicitud de nombre y edad")
 
-    # Validar nombre
+    # Validate name
     while True:
 
-        nombre = input("Ingrese su nombre: ").strip()
+        name = input("Enter your name: ").strip()
 
-        if nombre == "":
-            print("❌ El nombre no puede estar vacío")
+        if name == "":
+            print("El nombre no puede estar vacío")
 
-        elif not nombre.isalpha():
-            print("❌ El nombre solo debe contener letras")
+        elif not name.isalpha():
+            print("El nombre solo debe contener letras")
 
         else:
             break
-    # Validar edad
+
+    # Validate age
     while True:
 
         try:
+            age = int(input("Enter your age: "))
 
-            edad = int(input("Ingrese su edad: "))
-
-            if edad < 0:
+            if age < 0:
                 print("❌ La edad no puede ser negativa")
 
-            elif edad > 120:
+            elif age > 120:
                 print("❌ Edad no válida")
 
             else:
@@ -34,4 +34,4 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar números")
 
-    print(f"Hola {nombre}, tienes {edad} años.")
+    print(f"Hola {name}, tienes {age} años.")
