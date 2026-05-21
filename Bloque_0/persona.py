@@ -10,7 +10,7 @@ class Person:
 
 def run():
 
-    print(""Crear una clase Persona y tres objetos.\n")
+    print("Crear una clase Persona y tres objetos.\n")
 
     person1 = Person("Carlos", 20)
     person2 = Person("Ana", 25)
