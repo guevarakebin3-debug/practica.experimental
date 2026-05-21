@@ -1,45 +1,45 @@
-def ejecutar():
+def run():
 
     print("Decorador simple")
 
-    def decorador(func):
+    def decorator(func):
         def wrapper():
             print("Iniciando...")
             func()
         return wrapper
 
 
-    @decorador
-    def saludar():
+    @decorator
+    def greet():
         print("Hola mundo")
 
-    saludar()
+    greet()
 
 
-    print(" Decorador para calcular el cuadrado con validación")
+    print("Decorador para calcular el cuadrado con validación")
 
-    def validar_positivo(func):
+    def validate_positive(func):
         def wrapper(n):
             try:
                 if n < 0:
-                    print("Error: el número debe ser positivo")
+                    print("❌ Error: el número debe ser positivo")
                     return None
                 return func(n)
             except Exception as e:
-                print("Ocurrió un error:", e)
+                print("❌ Ocurrió un error:", e)
                 return None
         return wrapper
 
 
-    @validar_positivo
-    def cuadrado(n):
+    @validate_positive
+    def square(n):
         return n ** 2
 
 
     try:
         num = int(input("Ingrese un número: "))
-        resultado = cuadrado(num)
-        print("Resultado:", resultado)
+        result = square(num)
+        print("Resultado:", result)
 
     except ValueError:
-        print("Error: debes ingresar un número válido")
+        print("❌ Error: debes ingresar un número válido")
