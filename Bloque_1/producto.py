@@ -2,7 +2,7 @@ class Product:
     def __init__(self, code, name, price):
 
         if price < 0:
-            raise ValueError("Price cannot be negative")
+            raise ValueError("El precio no puede ser negativo")
 
         self.code = code
         self.name = name
@@ -12,16 +12,16 @@ class Product:
 def ask_price(product_name):
     while True:
         try:
-            price = float(input(f"Enter price for {product_name}: "))
+            price = float(input(f"Ingrese el precio de{product_name}: "))
             if price < 0:
-                raise ValueError("Price cannot be negative")
+                raise ValueError("El precio no puede ser negativo")
             return price
         except ValueError as e:
             print("❌ Error:", e)
 
 
 def run():
-    print("=== FIXED PRODUCTS REGISTRATION ===\n")
+    print("=== REGISTRO DE PRODUCTOS FIJOS ===\n")
 
     # Product 1
     code1, name1 = "P001", "Laptop"
