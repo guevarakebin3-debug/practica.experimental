@@ -33,12 +33,12 @@ def run():
             quantity = int(input("¿Cuántos productos deseas ingresar?: "))
 
             if quantity <= 0:
-                print("Debes ingresar un número mayor a 0")
+                print("❌ Debes ingresar un número mayor a 0")
             else:
                 break
 
         except ValueError:
-            print("Debes ingresar un número entero válido")
+            print("❌ Debes ingresar un número entero válido")
 
     # INGRESO DE PRODUCTOS
     for i in range(quantity):
@@ -49,7 +49,7 @@ def run():
         while True:
             name = input("Nombre del producto: ").strip()
             if name == "":
-                print("El nombre no puede estar vacío")
+                print("❌ El nombre no puede estar vacío")
             else:
                 break
 
@@ -58,11 +58,11 @@ def run():
             try:
                 price = float(input("Precio del producto: "))
                 if price < 0:
-                    print("El precio no puede ser negativo")
+                    print("❌ El precio no puede ser negativo")
                 else:
                     break
             except ValueError:
-                print("Debes ingresar un número válido")
+                print("❌ Debes ingresar un número válido")
 
         products.append({
             "nombre": name,
