@@ -5,13 +5,13 @@ def run():
     # Validate name
     while True:
 
-        name = input("Enter your name: ").strip()
+        name = input("Ingrese su nombre: ").strip()
 
         if name == "":
-            print("El nombre no puede estar vacío")
+            print("❌ El nombre no puede estar vacío")
 
         elif not name.isalpha():
-            print("El nombre solo debe contener letras")
+            print("❌ El nombre solo debe contener letras")
 
         else:
             break
