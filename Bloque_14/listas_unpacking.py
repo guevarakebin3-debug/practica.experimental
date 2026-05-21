@@ -1,28 +1,25 @@
-def ejecutar():
+def run():
 
     print("Unpacking de listas")
 
-    numeros = (10, 20, 30, 40)
+    numbers = (10, 20, 30, 40)
 
-    primera, *mitad, ultima = numeros
+    first, *middle, last = numbers
 
-    print("\nLista completa:", numeros)
-    print("Primera:", primera)
-    print("Mitad:", mitad)
-    print("Ultima:", ultima)
-
-
+    print("\nLista completa:", numbers)
+    print("Primera:", first)
+    print("Mitad:", middle)
+    print("Última:", last)
 
 
     print("\nUso de * en funciones")
 
-    def multiplicar(a, b, c):
+    def multiply(a, b, c):
         return a * b * c
 
-    lista = [2, 3, 4]
+    nums_list = [2, 3, 4]
 
-    resultado = multiplicar(*lista)
+    result = multiply(*nums_list)
 
-    print("Lista:", lista)
-    print("Resultado:", resultado)
-
+    print("Lista:", nums_list)
+    print("Resultado:", result)
