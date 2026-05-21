@@ -6,7 +6,7 @@ class Student:
     @classmethod
     def from_dictionary(cls, data):
         return cls(
-            data.get("nombre", "")
+            data.get("nombre", ""),
             data.get("grades", [])
         )
 
