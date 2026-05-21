@@ -1,41 +1,43 @@
-class Estudiante:
-    def __init__(self, nombre, notas):
-        self.nombre = nombre
-        if notas is None:
-            self.notas = []
-        else:
-            self.notas = notas
+class Student:
+    def __init__(self, name, grades):
+        self.name = name
+        self.grades = grades if grades is not None else []
 
     @classmethod
-    def desde_diccionario(cls, datos):
-        return cls(datos["nombre"], datos.get("notas"))
+    def from_dictionary(cls, data):
+        return cls(
+            data.get("name", ""),
+            data.get("grades", [])
+        )
 
 
-def ejecutar():
+def ask_student():
+    name = input("Name: ").strip()
 
-    print("=== EJERCICIO 1 ===")
-    print("Ingresa los datos del estudiante")
+    entry = input("Grades (separated by space): ").strip()
+    grades = list(map(float, entry.split())) if entry else []
 
-    nombre = input("Nombre: ")
-    notas = list(map(float, input("Notas: ").split()))
+    return name, grades
 
-    estudiante = Estudiante(nombre, notas)
 
-    print("Resultado:")
-    print(estudiante.nombre, estudiante.notas)
+def run():
+    print("Create normal student")
+    name, grades = ask_student()
+    student = Student(name, grades)
 
-    print("\n=== EJERCICIO 2 (Decorador / classmethod) ===")
-    print("Ingresa los datos del estudiante")
+    print("Result:")
+    print(student.name, student.grades)
 
-    nombre = input("Nombre: ")
-    notas = list(map(float, input("Notas: ").split()))
+    print("\nCreate student from dictionary")
 
-    datos = {
-        "nombre": nombre,
-        "notas": notas
+    name, grades = ask_student()
+
+    data = {
+        "name": name,
+        "grades": grades
     }
 
-    estudiante2 = Estudiante.desde_diccionario(datos)
+    student2 = Student.from_dictionary(data)
 
-    print("Resultado:")
-    print(estudiante2.nombre, estudiante2.notas)
+    print("Result:")
+    print(student2.name, student2.grades)
