@@ -6,29 +6,29 @@ class Student:
     @classmethod
     def from_dictionary(cls, data):
         return cls(
-            data.get("name", ""),
+            data.get("nombre", "")
             data.get("grades", [])
         )
 
 
 def ask_student():
-    name = input("Name: ").strip()
+    name = input("Nombre: ").strip()
 
-    entry = input("Grades (separated by space): ").strip()
+    entry = input("Notas (separadas por espacio): ").strip()
     grades = list(map(float, entry.split())) if entry else []
 
     return name, grades
 
 
 def run():
-    print("Create normal student")
+    print("Crear estudiante)
     name, grades = ask_student()
     student = Student(name, grades)
 
-    print("Result:")
+    print("Resultado:")
     print(student.name, student.grades)
 
-    print("\nCreate student from dictionary")
+    print("\nCrear estudiante desde diccionario")
 
     name, grades = ask_student()
 
@@ -39,5 +39,5 @@ def run():
 
     student2 = Student.from_dictionary(data)
 
-    print("Result:")
+    print("Resultado:")
     print(student2.name, student2.grades)
