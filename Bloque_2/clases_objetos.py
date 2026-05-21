@@ -1,8 +1,8 @@
-def ejecutar():
-    print("Ejemplo de listas")
+def run():
+    print("Ejemplo de Listas")
 
-    lista = [1, 2, 3, 4, 5]
+    numbers = [1, 2, 3, 4, 5]
 
-    print(lista[0])
-    print(lista[4])
-    print(lista[1:4])
+    print(numbers[0])
+    print(numbers[4])
+    print(numbers[1:4])
