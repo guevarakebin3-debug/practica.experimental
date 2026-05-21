@@ -1,123 +1,16 @@
-# menu.py
-import os
+from consoleUtils import ConsoleUtils
+
 
 # =========================
-# UTILIDAD
+# COMPATIBILIDAD
 # =========================
 
 def limpiar():
-    os.system("cls" if os.name == "nt" else "clear")
+    ConsoleUtils.clear_screen()
 
-
-# =========================
-# GOTOXY
-# =========================
 
 def gotoxy(x, y):
-    print(f"\033[{y};{x}H", end="")
-
-# =========================
-# MARCO (BORDER)
-# =========================
-
-def marco(x, y, ancho, alto):
-
-    # líneas horizontales
-    for i in range(ancho):
-        gotoxy(x + i, y)
-        print("═", end="")
-        gotoxy(x + i, y + alto)
-        print("═", end="")
-
-    # líneas verticales
-    for i in range(alto + 1):
-        gotoxy(x, y + i)
-        print("║", end="")
-        gotoxy(x + ancho, y + i)
-        print("║", end="")
-
-    # esquinas
-    gotoxy(x, y)
-    print("╔", end="")
-    gotoxy(x + ancho, y)
-    print("╗", end="")
-    gotoxy(x, y + alto)
-    print("╚", end="")
-    gotoxy(x + ancho, y + alto)
-    print("╝", end="")
-
-
-def mostrar_menu(titulo, opciones):
-
-    while True:
-
-        limpiar()
-
-        # 🔥 MARCO DEL MENÚ
-        marco(60, 1, 55, 35)
-
-        # Título dentro del marco
-        gotoxy(80, 3)
-        print(titulo)
-
-        # Opciones dentro del marco
-        fila = 5
-
-        for clave, valor in opciones.items():
-
-            gotoxy(80, fila)
-            print(f"{clave}. {valor['texto']}")
-
-            fila += 1
-
-        # Entrada
-        gotoxy(80, fila + 1)
-        opcion = input("Seleccione una opción: ")
-
-        # Validación
-        if opcion in opciones:
-
-            accion = opciones[opcion]["accion"]
-
-            if accion is None:
-                break
-
-            limpiar()
-            accion()
-            input("\nPresione ENTER para volver al menú...")
-        
-
-        else:
-
-            gotoxy(80, fila + 3)
-            print("❌ Opción inválida")
-
-            gotoxy(80, fila + 5)
-            input("Presione ENTER para continuar...")
-
-
-def crear_submenu(titulo, ejercicios):
-
-    opciones = {}
-
-    contador = 1
-
-    for texto, accion in ejercicios:
-
-        opciones[str(contador)] = {
-            "texto": texto,
-            "accion": accion
-        }
-
-        contador += 1
-
-    opciones["0"] = {
-        "texto": "Volver",
-        "accion": None
-    }
-
-    mostrar_menu(titulo, opciones)
-
+    ConsoleUtils.gotoxy(x, y)
 
 # =========================
 # IMPORTS DE BLOQUES
@@ -168,20 +61,124 @@ from Bloque_17.exportar_mixin import ejecutar as exportar_mixin
 
 
 # =========================
-# MENÚS
+# MOSTRAR MENÚ
+# =========================
+
+# =========================
+# MOSTRAR MENÚ
+# =========================
+
+# =========================
+# MOSTRAR MENÚ
+# =========================
+
+def mostrar_menu(titulo, opciones):
+
+    while True:
+
+        ConsoleUtils.clear_screen()
+
+        lineas = []
+
+        # Construir opciones
+        for clave, valor in opciones.items():
+            lineas.append(
+                f"{clave}. {valor['texto']}"
+            )
+
+        # Mostrar menú
+        ConsoleUtils.print_box(
+            titulo,
+            lineas
+        )
+
+        opcion = input(
+            "\nSeleccione una opción: "
+        ).strip()
+
+        if opcion in opciones:
+
+            accion = opciones[opcion]["accion"]
+
+            # Salir o volver
+            if accion is None:
+                break
+
+            # Entrar al ejercicio
+            ConsoleUtils.clear_screen()
+
+            ConsoleUtils.print_box(
+                "EJERCICIOS",
+                []
+            )
+
+            accion()
+
+            print()
+
+            input("Presione ENTER para volver...")
+
+        else:
+
+            print("\n❌ Opción inválida")
+
+            input("Presione ENTER...")
+# =========================
+# CREAR SUBMENÚ
+# =========================
+
+def crear_submenu(titulo, ejercicios):
+
+    opciones = {}
+
+    contador = 1
+
+    for texto, accion in ejercicios:
+
+        opciones[str(contador)] = {
+            "texto": texto,
+            "accion": accion
+        }
+
+        contador += 1
+
+    opciones["0"] = {
+        "texto": "Volver",
+        "accion": None
+    }
+
+    mostrar_menu(titulo, opciones)
+
+
+# =========================
+# MENÚS DE BLOQUES
 # =========================
 
 def menu_bloque_0():
-    crear_submenu("BLOQUE 0", [("Persona", persona)])
+    crear_submenu("BLOQUE 0", [
+        ("Persona", persona)
+    ])
+
 
 def menu_bloque_1():
-    crear_submenu("BLOQUE 1", [("Producto", producto), ("Estudiante", estudiante)])
+    crear_submenu("BLOQUE 1", [
+        ("Producto", producto),
+        ("Estudiante", estudiante)
+    ])
+
 
 def menu_bloque_2():
-    crear_submenu("BLOQUE 2", [("Tipos de datos", tipos), ("Clases", clases_objetos)])
+    crear_submenu("BLOQUE 2", [
+        ("Tipos de datos", tipos),
+        ("Clases", clases_objetos)
+    ])
+
 
 def menu_bloque_3():
-    crear_submenu("BLOQUE 3", [("Operadores", operadores)])
+    crear_submenu("BLOQUE 3", [
+        ("Operadores", operadores)
+    ])
+
 
 def menu_bloque_4():
     crear_submenu("BLOQUE 4", [
@@ -190,26 +187,57 @@ def menu_bloque_4():
         ("Concatenación", concat)
     ])
 
+
 def menu_bloque_5():
-    crear_submenu("BLOQUE 5", [("Par o impar", par), ("Notas", notas), ("Login", login)])
+    crear_submenu("BLOQUE 5", [
+        ("Par o impar", par),
+        ("Notas", notas),
+        ("Login", login)
+    ])
+
 
 def menu_bloque_6():
-    crear_submenu("BLOQUE 6", [("Ciclos", ciclos)])
+    crear_submenu("BLOQUE 6", [
+        ("Ciclos", ciclos)
+    ])
+
 
 def menu_bloque_7():
-    crear_submenu("BLOQUE 7", [("Funciones", funciones), ("Factorial", factorial), ("Operaciones", operaciones)])
+    crear_submenu("BLOQUE 7", [
+        ("Funciones", funciones),
+        ("Factorial", factorial),
+        ("Operaciones", operaciones)
+    ])
+
 
 def menu_bloque_8():
-    crear_submenu("BLOQUE 8", [("Listas", lista), ("Copiar listas", copiar)])
+    crear_submenu("BLOQUE 8", [
+        ("Listas", lista),
+        ("Copiar listas", copiar)
+    ])
+
 
 def menu_bloque_9():
-    crear_submenu("BLOQUE 9", [("Tuplas", tuplas), ("Coordenadas", coordenadas)])
+    crear_submenu("BLOQUE 9", [
+        ("Tuplas", tuplas),
+        ("Coordenadas", coordenadas)
+    ])
+
 
 def menu_bloque_10():
-    crear_submenu("BLOQUE 10", [("Diccionarios", diccionarios), ("Copia", copia_diccionario)])
+    crear_submenu("BLOQUE 10", [
+        ("Diccionarios", diccionarios),
+        ("Copia", copia_diccionario)
+    ])
+
 
 def menu_bloque_11():
-    crear_submenu("BLOQUE 11", [("Conjuntos", conjuntos), ("Duplicados", duplicados), ("Simétrica", diferencia_simetrica)])
+    crear_submenu("BLOQUE 11", [
+        ("Conjuntos", conjuntos),
+        ("Duplicados", duplicados),
+        ("Simétrica", diferencia_simetrica)
+    ])
+
 
 def menu_bloque_12():
     crear_submenu("BLOQUE 12", [
@@ -219,17 +247,36 @@ def menu_bloque_12():
         ("Actualizar lista", actualizar_lista)
     ])
 
+
 def menu_bloque_13():
-    crear_submenu("BLOQUE 13", [("Decorador básico", decorador_basico), ("Decorador avanzado", decorador_avanzado)])
+    crear_submenu("BLOQUE 13", [
+        ("Decorador básico", decorador_basico),
+        ("Decorador avanzado", decorador_avanzado)
+    ])
+
 
 def menu_bloque_14():
-    crear_submenu("BLOQUE 14", [("Listas unpacking", listas_unpacking), ("Diccionarios unpacking", diccionarios_unpacking), ("Extra", unpacking_extra)])
+    crear_submenu("BLOQUE 14", [
+        ("Listas unpacking", listas_unpacking),
+        ("Diccionarios unpacking", diccionarios_unpacking),
+        ("Extra", unpacking_extra)
+    ])
+
 
 def menu_bloque_15():
-    crear_submenu("BLOQUE 15", [("Map", map_lambda), ("Filter", filter_lambda), ("Reduce", reduce_lambda)])
+    crear_submenu("BLOQUE 15", [
+        ("Map", map_lambda),
+        ("Filter", filter_lambda),
+        ("Reduce", reduce_lambda)
+    ])
+
 
 def menu_bloque_16():
-    crear_submenu("BLOQUE 16", [("Archivos", archivos), ("JSON", json_datos)])
+    crear_submenu("BLOQUE 16", [
+        ("Archivos", archivos),
+        ("JSON", json_datos)
+    ])
+
 
 def menu_bloque_17():
     crear_submenu("BLOQUE 17", [
@@ -240,7 +287,7 @@ def menu_bloque_17():
 
 
 # =========================
-# INICIO
+# MENÚ PRINCIPAL
 # =========================
 
 def menu_principal():
@@ -268,8 +315,6 @@ def menu_principal():
     }
 
     mostrar_menu("MENU PRINCIPAL", opciones)
-
-
 
 
 
