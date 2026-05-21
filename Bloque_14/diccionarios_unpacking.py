@@ -1,4 +1,4 @@
-def ejecutar():
+def run():
 
     print("Combinación de 2 diccionarios usando **")
 
@@ -12,8 +12,8 @@ def ejecutar():
         "pais": "Ecuador"
     }
 
-    combinado = {**dict1, **dict2}
+    combined = {**dict1, **dict2}
 
     print("\nDiccionario 1:", dict1)
     print("Diccionario 2:", dict2)
-    print("Combinado:", combinado)
+    print("Combinado:", combined)
