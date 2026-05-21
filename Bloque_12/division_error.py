@@ -1,16 +1,15 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio 3")
     print("División con manejo de errores")
 
     while True:
 
         try:
-            a = int(input("Ingrese el primer número: "))
-            b = int(input("Ingrese el segundo número: "))
+            num1 = int(input("Ingrese el primer número: "))
+            num2 = int(input("Ingrese el segundo número: "))
 
-            resultado = a / b
-            print("Resultado:", resultado)
+            result = num1 / num2
+            print("Resultado:", result)
             break  # sale si todo está bien
 
         except ValueError:
