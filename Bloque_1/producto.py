@@ -1,42 +1,44 @@
-class Producto:
-    def __init__(self, codigo, nombre, precio):
+class Product:
+    def __init__(self, code, name, price):
 
-        if precio < 0:
-            raise ValueError("El precio no puede ser negativo")
+        if price < 0:
+            raise ValueError("Price cannot be negative")
 
-        self.codigo = codigo
-        self.nombre = nombre
-        self.precio = precio
+        self.code = code
+        self.name = name
+        self.price = price
 
 
-def ejecutar():
-    print("Crear un producto y validar el precio")
-    print("Ingrese los datos del producto 1")
-
-    codigo1 = input("Código: ")
-    nombre1 = input("Nombre: ")
-
+def ask_price(product_name):
     while True:
         try:
-            precio1 = float(input("Precio: "))
-            producto1 = Producto(codigo1, nombre1, precio1)
-            break
-        except ValueError:
-            print("❌ Error: ingresa un número válido para el precio")
+            price = float(input(f"Enter price for {product_name}: "))
+            if price < 0:
+                raise ValueError("Price cannot be negative")
+            return price
+        except ValueError as e:
+            print("❌ Error:", e)
 
-    print("\nIngrese los datos del producto 2")
 
-    codigo2 = input("Código: ")
-    nombre2 = input("Nombre: ")
+def run():
+    print("=== FIXED PRODUCTS REGISTRATION ===\n")
 
-    while True:
-        try:
-            precio2 = float(input("Precio: "))
-            producto2 = Producto(codigo2, nombre2, precio2)
-            break
-        except ValueError:
-            print("❌ Error: ingresa un número válido para el precio")
+    # Product 1
+    code1, name1 = "P001", "Laptop"
+    print(f"Product: {code1} - {name1}")
 
-    print("\nProductos registrados:")
-    print(producto1.codigo, producto1.nombre, producto1.precio)
-    print(producto2.codigo, producto2.nombre, producto2.precio)
+    price1 = ask_price(name1)
+    product1 = Product(code1, name1, price1)
+
+    print()
+
+    # Product 2
+    code2, name2 = "P002", "Mouse"
+    print(f"Product: {code2} - {name2}")
+
+    price2 = ask_price(name2)
+    product2 = Product(code2, name2, price2)
+
+    print("\n=== REGISTERED PRODUCTS ===")
+    print(product1.code, product1.name, product1.price)
+    print(product2.code, product2.name, product2.price)
