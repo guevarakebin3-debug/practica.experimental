@@ -1,24 +1,24 @@
-def ejecutar():
+def run():
     print("DECLARACIÓN DE VARIABLES SIMPLES Y COMPUESTAS")
 
-    entero = 19
-    flotante = 3.14
-    cadena = "Hola Python"
-    booleano = True
-    nulo = None
+    integer = 19
+    float_number = 3.14
+    string = "Hola Python"
+    boolean = True
+    null_value = None
 
-    lista = [1, 2, 3, "python"]
-    tupla = (10, 20, 30)
-    diccionario = {"nombre": "Juan", "edad": 25}
-    conjunto = {1, 2, 3, 4}
+    list_data = [1, 2, 3, "python"]
+    tuple_data = (10, 20, 30)
+    dictionary = {"nombre": "Juan", "edad": 25}
+    set_data = {1, 2, 3, 4}
 
-    print("Entero:", entero)
-    print("Float:", flotante)
-    print("String:", cadena)
-    print("Booleano:", booleano)
-    print("None:", nulo)
+    print("Integer:", integer)
+    print("Float number:", float_number)
+    print("String:", string)
+    print("Boolean:", boolean)
+    print("Null:", null_value)
 
-    print("Lista:", lista)
-    print("Tupla:", tupla)
-    print("Diccionario:", diccionario)
-    print("Conjunto:", conjunto)
+    print("List:", list_data)
+    print("Tuple:", tuple_data)
+    print("Dictionary:", dictionary)
+    print("Set:", set_data)
