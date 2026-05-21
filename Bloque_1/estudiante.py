@@ -21,7 +21,7 @@ def ask_student():
 
 
 def run():
-    print("Crear estudiante)
+    print("Crear estudiante")
     name, grades = ask_student()
     student = Student(name, grades)
 
