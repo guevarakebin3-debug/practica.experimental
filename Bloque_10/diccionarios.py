@@ -1,85 +1,84 @@
-def ejecutar():
-    print("Ejercicio 1")
+def run():
+
     print("Crear un diccionario")
 
     # Validar nombre (NO números)
     while True:
 
-        nombre = input("Ingrese su nombre: ").strip()
+        name = input("Ingrese su nombre: ").strip()
 
-        if nombre.replace(" ", "").isalpha():
+        if name.replace(" ", "").isalpha():
             break
         else:
-            print("❌ El nombre no puede contener números")
+            print("El nombre no puede contener números")
 
     # Validar edad
     while True:
 
         try:
-            edad = int(input("Ingrese su edad: "))
+            age = int(input("Ingrese su edad: "))
 
-            if edad < 0:
-                print("❌ No puede ser negativa")
+            if age < 0:
+                print("No puede ser negativa")
             else:
                 break
 
         except ValueError:
-            print("❌ Debe ingresar un número entero")
+            print("Debe ingresar un número entero")
 
-    ciudad = input("Ingrese su ciudad: ").strip()
+    city = input("Ingrese su ciudad: ").strip()
 
-    persona = {
-        "nombre": nombre,
-        "edad": edad,
-        "ciudad": ciudad,
+    person = {
+        "nombre": name,
+        "edad": age,
+        "ciudad": city,
     }
 
     print("\n--- Acceso con [] ---")
-    print("Nombre:", persona["nombre"])
-    print("Edad:", persona["edad"])
-    print("Ciudad:", persona["ciudad"])
+    print("Nombre:", person["nombre"])
+    print("Edad:", person["edad"])
+    print("Ciudad:", person["ciudad"])
 
     print("\n--- Acceso con get() ---")
-    print("Nombre:", persona.get("nombre"))
-    print("Edad:", persona.get("edad"))
-    print("Ciudad:", persona.get("ciudad"))
-    print("Teléfono:", persona.get("telefono", "No existe"))
+    print("Nombre:", person.get("nombre"))
+    print("Edad:", person.get("edad"))
+    print("Ciudad:", person.get("ciudad"))
+    print("Teléfono:", person.get("telefono", "No existe"))
 
-    print("\nEjercicio 2")
-    print("Mostrar claves y valores")
+    print("\nMostrar claves y valores")
 
     # Validar segunda persona
     while True:
 
-        nombre = input("Ingrese su nombre: ").strip()
+        name = input("Ingrese su nombre: ").strip()
 
-        if nombre.replace(" ", "").isalpha():
+        if name.replace(" ", "").isalpha():
             break
         else:
-            print("❌ El nombre no puede contener números")
+            print("El nombre no puede contener números")
 
     while True:
 
         try:
-            edad = int(input("Ingrese su edad: "))
+            age = int(input("Ingrese su edad: "))
 
-            if edad < 0:
-                print("❌ No puede ser negativa")
+            if age < 0:
+                print("No puede ser negativa")
             else:
                 break
 
         except ValueError:
-            print("❌ Debe ingresar un número entero")
+            print("Debe ingresar un número entero")
 
-    ciudad = input("Ingrese su ciudad: ").strip()
+    city = input("Ingrese su ciudad: ").strip()
 
-    persona = {
-        "nombre": nombre,
-        "edad": edad,
-        "ciudad": ciudad
+    person = {
+        "nombre": name,
+        "edad": age,
+        "ciudad": city
     }
 
     print("\n--- Claves y valores ---")
 
-    for clave, valor in persona.items():
-        print(clave, ":", valor)
+    for key, value in person.items():
+        print(key, ":", value)
