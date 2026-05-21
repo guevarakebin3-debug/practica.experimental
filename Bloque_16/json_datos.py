@@ -1,48 +1,46 @@
-def ejecutar():
+import json
 
-    print("Bloque 16")
+def run():
 
-    print("Ejercicio 2 - JSON")
+    print("Ejercicio - JSON")
 
-    import json
-
-    datos = {"x": 10, "y": 20}
+    data = {"x": 10, "y": 20}
 
     # GUARDAR
-    with open("datos.json", "w") as f:
-        json.dump(datos, f)
+    with open("data.json", "w") as file:
+        json.dump(data, file)
 
     # CARGAR
-    with open("datos.json", "r") as f:
-        cargado = json.load(f)
+    with open("data.json", "r") as file:
+        loaded = json.load(file)
 
-    print("Datos cargados:", cargado)
-    print("Valor de x:", cargado["x"])
+    print("Datos cargados:", loaded)
+    print("Valor de x:", loaded["x"])
 
 
     print("\nEjercicio 3 - Lista JSON interactiva")
 
-    usuarios = []
+    users = []
 
     for i in range(2):
         print(f"\nUsuario {i + 1}")
-        nombre = input("Ingrese nombre: ")
-        edad = int(input("Ingrese edad: "))
+        name = input("Ingrese nombre: ")
+        age = int(input("Ingrese edad: "))
 
-        usuarios.append({
-            "nombre": nombre,
-            "edad": edad
+        users.append({
+            "nombre": name,
+            "edad": age
         })
 
     # GUARDAR EN JSON
-    with open("usuarios.json", "w") as f:
-        json.dump(usuarios, f, indent=2)
+    with open("users.json", "w") as file:
+        json.dump(users, file, indent=2)
 
     # LEER JSON
-    with open("usuarios.json", "r") as f:
-        data = json.load(f)
+    with open("users.json", "r") as file:
+        data = json.load(file)
 
     print("\n--- USUARIOS GUARDADOS ---")
-    for u in data:
-        print("Nombre:", u["nombre"], "- Edad:", u["edad"])
+    for user in data:
+        print("Nombre:", user["nombre"], "- Edad:", user["edad"])
 
