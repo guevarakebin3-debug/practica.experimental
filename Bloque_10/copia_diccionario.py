@@ -1,17 +1,16 @@
-def ejecutar():
+def run():
 
-    print("Ejercicio 3")
     print("Copia de diccionarios")
     print("a : 1 , b = 2")
 
-    datos = {
+    data = {
         "a": 1,
         "b": 2
     }
 
-    copia = datos  # referencia, no copia real
+    copy_data = data  # referencia, no copia real
 
-    copia["b"] = 99
+    copy_data["b"] = 99
 
-    print("Datos original:", datos)
-    print("Copia:", copia)
+    print("Datos original:", data)
+    print("Copia:", copy_data)
