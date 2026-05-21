@@ -1,16 +1,13 @@
-def ejecutar():
+def run():
 
-    print("Bloque 11")
-
-    print("Ejercicio 2")
     print("Eliminar duplicados con set")
 
     # Validar cantidad
     while True:
         try:
-            cantidad = int(input("¿Cuántos números vas a ingresar?: "))
+            quantity = int(input("¿Cuántos números vas a ingresar?: "))
 
-            if cantidad < 0:
+            if quantity < 0:
                 print("❌ No puede ser negativo")
             else:
                 break
@@ -18,21 +15,21 @@ def ejecutar():
         except ValueError:
             print("❌ Debe ingresar un número entero")
 
-    lista = []
+    numbers_list = []
 
-    for i in range(cantidad):
+    for i in range(quantity):
 
         # Validar cada número
         while True:
             try:
                 num = int(input(f"Ingrese el número {i + 1}: "))
-                lista.append(num)
+                numbers_list.append(num)
                 break
             except ValueError:
                 print("❌ Debe ingresar un número entero")
 
-    print("\nLista original:", lista)
+    print("\nLista original:", numbers_list)
 
-    sin_duplicados = list(set(lista))
+    no_duplicates = list(set(numbers_list))
 
-    print("Sin duplicados:", sin_duplicados)
+    print("Sin duplicados:", no_duplicates)
