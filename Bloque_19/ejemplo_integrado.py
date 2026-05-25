@@ -77,7 +77,3 @@ def run():
 
     print("Cliente:", sale.client.name)
     print("Total:", sale.total())
-
-
-if __name__ == "__main__":
-    run()
