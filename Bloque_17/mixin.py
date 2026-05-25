@@ -1,60 +1,111 @@
-class ValidationMixin:
-    def validate_email(self, email):
-        return "@" in email and email.endswith(".com")
+# MIXIN 1
+class SaludoMixin:
 
-    def validate_age(self, age):
-        return age >= 18
+    def saludar(self):
+        print(f"Hola, soy {self.nombre}")
 
 
-class User(ValidationMixin):
-    def register(self, name, age, email):
+# MIXIN 2
+class TrabajoMixin:
 
-        if not self.validate_age(age):
-            print("Edad inválida (debe ser mayor o igual a 18)")
-            print("Intenta registrarte nuevamente\n")
-            return
+    def trabajar(self):
+        print(f"{self.nombre} está trabajando")
 
-        if not self.validate_email(email):
-            print("❌ Correo inválido")
-            print("❌ Intenta registrarte nuevamente\n")
-            return
 
-        print("\nUsuario registrado correctamente")
-        print("Nombre:", name)
-        print("Edad:", age)
-        print("Correo:", email)
+# Clase que hereda de los 2 mixins
+class Empleado(SaludoMixin, TrabajoMixin):
 
+    def __init__(self, nombre, cargo):
+        self.nombre = nombre
+        self.cargo = cargo
+
+    def mostrar_datos(self):
+        print("Nombre:", self.nombre)
+        print("Cargo:", self.cargo)
+
+
+# Otra clase que también hereda de los mixins
+class Estudiante(SaludoMixin, TrabajoMixin):
+
+    def __init__(self, nombre, carrera):
+        self.nombre = nombre
+        self.carrera = carrera
+
+    def mostrar_datos(self):
+        print("Nombre:", self.nombre)
+        print("Carrera:", self.carrera)
 
 def run():
+# ===== CREAR OBJETOS =====
 
-    user = User()
+    empleado1 = Empleado("Carlos", "Programador")
+    empleado2 = Empleado("Ana", "Diseñadora")
 
-    while True:
+    estudiante1 = Estudiante("Luis", "Ingeniería")
+    estudiante2 = Estudiante("María", "Medicina")
 
-        print("\n--- Registro ---")
 
-        name = input("Nombre: ")
+# ===== MOSTRAR EN CONSOLA =====
 
-        try:
-            age = int(input("Edad: "))
-        except ValueError:
-            print("❌ Edad inválida")
-            print("❌ Debes registrarte nuevamente\n")
-            continue
+    print("\n--- EMPLEADOS ---")
 
-        if not user.validate_age(age):
-            print("❌ Edad inválida")
-            print("❌ Debes registrarte nuevamente\n")
-            continue
+    empleado1.saludar()
+    empleado1.trabajar()
+    empleado1.mostrar_datos()
 
-        email = input("Correo: ")
+    print()
+    empleado2.saludar()
+    empleado2.trabajar()
+    empleado2.mostrar_datos()
 
-        if not user.validate_email(email):
-            print("❌ Correo inválido")
-            print("❌ Debes registrarte nuevamente\n")
-            continue
 
-        user.register(name, age, email)
+    print("\n--- ESTUDIANTES ---")
 
-        print("Proceso finalizado correctamente")
-        break
+    estudiante1.saludar()
+    estudiante1.trabajar()
+    estudiante1.mostrar_datos()
+
+    print()
+
+    estudiante2.saludar()
+    estudiante2.trabajar()
+    estudiante2.mostrar_datos()
+
+
+
+
+
+
+class ValidationMixin:
+
+    def validar_edad(self, edad):
+
+        if edad >= 18:
+            return True
+
+        return False
+
+
+class Usuario(ValidationMixin):
+
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def mostrar(self):
+        print("Nombre:", self.nombre)
+        print("Edad:", self.edad)
+
+
+def ejecutar():
+
+    usuario1 = Usuario("Kebin", 18)
+
+    if usuario1.validar_edad(usuario1.edad):
+
+        print("Edad válida")
+        usuario1.mostrar()
+
+    else:
+        print("Edad inválida")
+
