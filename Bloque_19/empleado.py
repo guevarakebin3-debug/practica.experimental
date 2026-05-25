@@ -13,7 +13,7 @@ class Employee(Person):
 
 def run():
 
-    print("Crear una clase Persona y una clase Empleado que hereda de Persona.\n")
+    print("Crea una clase Persona y una clase Empleado que hereda de Persona.\n")
 
     employee = Employee("E01", "Carlos", 500)
 
