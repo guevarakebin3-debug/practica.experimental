@@ -1,79 +1,85 @@
 from abc import ABC, abstractmethod
 
+
 # INTERFACE
 class ICrud(ABC):
     @abstractmethod
-    def create(self):
+    def crear(self):
         pass
 
 
 # ASSOCIATION
-class Company:
-    def __init__(self, name):
-        self.business_name = name
+class Empresa:
+    def __init__(self, nombre):
+        self.razonsocial = nombre
 
 
 # BASE CLASS
-class Person:
-    def __init__(self, id, name):
+class Persona:
+    def __init__(self, id, nombre):
         self.id = id
-        self.name = name
+        self.nombre = nombre
 
 
-# INHERITANCE
-class Client(Person):
-    def __init__(self, id, name, email):
-        super().__init__(id, name)
-        self.email = email
+# HERENCIA
+class Cliente(Persona):
+    def __init__(self, id, nombre, correo):
+        super().__init__(id, nombre)
+        self.correo = correo
 
 
-class Product:
-    def __init__(self, code, name, price):
-        self.code = code
-        self.name = name
-        self.price = price
+class Producto:
+    def __init__(self, codigo, nombre, precio):
+        self.codigo = codigo
+        self.nombre = nombre
+        self.precio = precio
 
 
 # COMPOSITION
-class SaleDetail:
-    def __init__(self, product, quantity):
-        self.product = product
-        self.quantity = quantity
+class DetalleVenta:
+    def __init__(self, producto, cantidad):
+        self.producto = producto
+        self.cantidad = cantidad
 
     def subtotal(self):
-        return self.product.price * self.quantity
+        return self.producto.precio * self.cantidad
 
 
 # AGGREGATION + INTERFACE
-class Sale(ICrud):
-    def __init__(self, client):
-        self.client = client
-        self.details = []
+class Venta(ICrud):
+    def __init__(self, cliente):
+        self.cliente = cliente
+        self.detalles = []
 
-    def add_product(self, product, quantity):
-        self.details.append(SaleDetail(product, quantity))
+    def agregar(self, producto, cantidad):
+        self.detalles.append(DetalleVenta(producto, cantidad))
 
-    def create(self, company):
-        print("Empresa:", company.business_name)
+    def crear(self, emp):
+        print("Empresa:", emp.razonsocial)
         print("Venta creada")
 
     def total(self):
-        return sum(d.subtotal() for d in self.details)
+        return sum(d.subtotal() for d in self.detalles)
 
 
+# FUNCIÓN PRINCIPAL
 def run():
-    client = Client("001", "Daniel", "d@mail.com")
 
-    p1 = Product("P01", "Laptop", 900)
-    p2 = Product("P02", "Mouse", 25)
+    print("\n=== RELACIONES UML ===\n")
 
-    sale = Sale(client)
-    sale.add_product(p1, 1)
-    sale.add_product(p2, 2)
+    print("1. Herencia")
+    print("Cliente → Persona = Cliente ES UNA Persona")
 
-    company = Company("SuperMaxi")
+    print("\n2. Interfaz")
+    print("Venta → ICrud = Venta implementa un contrato")
 
-    sale.create(company)
+    print("\n3. Asociación")
+    print("Venta → Empresa = Venta usa Empresa como parámetro")
 
-    print("Cliente:", sale.client.name)
-    print("Total:", sale.total())
+    print("\n4. Agregación")
+    print("Venta → Cliente = Venta tiene un cliente externo")
+
+    print("\n5. Composición")
+    print("Venta → DetalleVenta = Venta crea y controla los detalles")
+
+
