@@ -16,7 +16,7 @@ def run():
     greet()
 
 
-    print("Decorador para calcular el cuadrado con validación")
+    print("\nDecorador para calcular el cuadrado")
 
     def validate_positive(func):
         def wrapper(n):
@@ -36,10 +36,9 @@ def run():
         return n ** 2
 
 
-    try:
-        num = int(input("Ingrese un número: "))
-        result = square(num)
-        print("Resultado:", result)
+    # Dato fijo
+    num = 6
 
-    except ValueError:
-        print("❌ Error: debes ingresar un número válido")
+    result = square(num)
+
+    print("Resultado:", result)
