@@ -15,6 +15,11 @@ class Product:
 
 
 def run():
+
+    print("Descripción: Crear una clase Product que controle el acceso al atributo price usando property.\n")
+
     p = Product()
     p.price = 100
+
+    print("DATOS DEL PRODUCTO:")
     print("El precio del producto es:", p.price)
