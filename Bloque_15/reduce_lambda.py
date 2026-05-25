@@ -14,16 +14,8 @@ def run():
 
     print("\nEjercicio adicional: Multiplicación con reduce")
 
-    numbers = []
-
-    for i in range(3):
-        while True:
-            try:
-                num = int(input(f"Ingrese número {i + 1}: "))
-                numbers.append(num)
-                break
-            except ValueError:
-                print("❌ Error: debe ingresar un número entero válido.")
+    # Datos fijos
+    numbers = [5, 2, 3]
 
     print("\nLista ingresada:", numbers)
 
