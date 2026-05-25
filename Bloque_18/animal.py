@@ -18,7 +18,8 @@ class Cow(Animal):
         print("La vaca muge")
 
 
-animals = [Dog(), Cat(), Cow()]
+def run():
+    animals = [Dog(), Cat(), Cow()]
 
-for animal in animals:
-    animal.sound()
+    for animal in animals:
+        animal.sound()
