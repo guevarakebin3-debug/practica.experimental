@@ -15,5 +15,6 @@ class Triangle(Shape):
         return (self.base * self.height) / 2
 
 
-t = Triangle(10, 5)
-print("El área del triángulo es:", t.area())  # salida en español
+def run():
+    t = Triangle(10, 5)
+    print("El área del triángulo es:", t.area())
