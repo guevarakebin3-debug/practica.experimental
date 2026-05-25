@@ -306,7 +306,7 @@ def menu_principal():
         "17": {"text": "Bloque 16", "action": menu_block_16},
         "18": {"text": "Bloque 17", "action": menu_block_17},
         "19": {"text": "Bloque 18", "action": menu_block_18}, 
-        "20": {"text": "Bloque 19", "action": menu_block_19} 
+        "20": {"text": "Bloque 19", "action": menu_block_19}, 
         "0": {"text": "Salir", "action": None}
     }
 
