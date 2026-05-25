@@ -56,7 +56,7 @@ from Bloque_15.filter_lambda import run as filter_lambda
 from Bloque_15.reduce_lambda import run as reduce_lambda
 from Bloque_16.archivos import run as archivos
 from Bloque_16.json_datos import run as json_datos
-from Bloque_17.exportar_mixin import run as exportar_mixin
+from Bloque_17.promedio_mixin import run as promedio_mixin
 from Bloque_17.mixin import run as mixin
 from Bloque_18.animal import run as animal
 from Bloque_18.producto import run as productos
@@ -261,7 +261,7 @@ def menu_block_16():
 
 def menu_block_17():
     create_submenu("BLOQUE 17", [
-        ("Exportar Mixin", exportar_mixin),
+        ("Promedio Mixin", promedio_mixin),
         ("Mixin", mixin)
     ])
 
