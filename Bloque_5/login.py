@@ -1,17 +1,16 @@
 def run():
 
     print("Sistema de login")
-    print("Usuario: admin | password: 123")
 
-    while True:
+    # Datos fijos
+    user = "admin"
+    password = "123"
 
-        user = input("Ingrese el usuario: ")
-        password = input("Ingrese la contraseña: ")
+    # Validación
+    if user == "admin" and password == "123":
+        print("✅ Bienvenido")
 
-        if user == "admin" and password == "123":
-            print("✅ Bienvenido")
-            break
+    else:
+        print("❌ Acceso denegado")
 
-        else:
-            print("❌ Acceso denegado")
-            print("Intente nuevamente\n")
+
