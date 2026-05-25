@@ -17,7 +17,7 @@ class Triangle(Shape):
 
 
 def run():
-    print("Descripción: Crear una clase abstracta Shape y una clase Triangle que implemente el método area().\n")
+    print("Crea una clase abstracta Shape y una clase Triangle que implemente el método area().\n")
 
     t = Triangle(10, 5)
 
