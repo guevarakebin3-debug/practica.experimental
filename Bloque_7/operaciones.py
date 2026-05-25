@@ -11,21 +11,8 @@ def run():
 
     print("\nEjercicio adicional: calcular doble, triple y cuadrado")
 
-    # Validar número
-    while True:
-
-        entry = input("Ingrese un número: ").strip()
-
-        if entry == "":
-            print("❌ No puede estar vacío")
-            continue
-
-        try:
-            num = float(entry)
-            break
-
-        except ValueError:
-            print("❌ Debe ingresar un número válido")
+    # Dato fijo
+    num = 5
 
     d, t, s = operations(num)
 
