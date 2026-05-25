@@ -13,26 +13,24 @@ def run():
 
     print("\nEjercicio adicional: eliminación, número máximo y mínimo de una lista")
 
+    # Datos fijos
+    fixed_numbers = [10, 25, 7]
+
     numbers = []
 
-    for i in range(3):
+    for number in fixed_numbers:
 
-        # Validar número
-        while True:
+        # Validaciones
+        if str(number).strip() == "":
+            print("❌ No puede estar vacío")
+            continue
 
-            entry = input(f"Ingrese el número {i + 1}: ").strip()
+        try:
+            value = int(number)
+            numbers.append(value)
 
-            if entry == "":
-                print("❌ No puede estar vacío")
-                continue
-
-            try:
-                number = int(entry)
-                numbers.append(number)
-                break
-
-            except ValueError:
-                print("❌ Debe ingresar un número entero")
+        except ValueError:
+            print("❌ Debe ingresar un número entero")
 
     print("\nLista original:", numbers)
 
