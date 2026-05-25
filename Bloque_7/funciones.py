@@ -1,23 +1,21 @@
 def run():
 
-    def double(x):
-        return x * 2
+    def operations(number):
 
-    def sum_multiple(*numbers):
-        return sum(numbers)
+        double = number * 2
+        triple = number * 3
+        square = number ** 2
 
-    print("Calcular el doble de un número")
+        return double, triple, square
+
+
+    print("\nEjercicio adicional: calcular doble, triple y cuadrado")
 
     # Dato fijo
-    number = 8
+    num = 5
 
-    print("El doble es:", double(number))
+    d, t, s = operations(num)
 
-    print("\nSuma de varios números")
-
-    # Datos fijos
-    numbers_list = [10, 20, 30, 40]
-
-    result = sum_multiple(*numbers_list)
-
-    print("La suma total es:", result)
+    print("Doble:", d)
+    print("Triple:", t)
+    print("Cuadrado:", s)
