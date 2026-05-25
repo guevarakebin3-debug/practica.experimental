@@ -19,7 +19,12 @@ class Cow(Animal):
 
 
 def run():
+
+    print("Crear una clase Animal y varias clases hijas que implementan su propio sonido.\n")
+
     animals = [Dog(), Cat(), Cow()]
+
+    print("SONIDOS DE LOS ANIMALES:")
 
     for animal in animals:
         animal.sound()
