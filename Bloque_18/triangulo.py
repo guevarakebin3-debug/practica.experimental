@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Shape(ABC):
     @abstractmethod
     def area(self):
@@ -16,5 +17,11 @@ class Triangle(Shape):
 
 
 def run():
+    print("Descripción: Crear una clase abstracta Shape y una clase Triangle que implemente el método area().\n")
+
     t = Triangle(10, 5)
+
+    print("DATOS DEL TRIÁNGULO:")
+    print("Base:", t.base)
+    print("Altura:", t.height)
     print("El área del triángulo es:", t.area())
