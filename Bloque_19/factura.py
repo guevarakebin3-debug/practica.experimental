@@ -28,7 +28,6 @@ class Invoice:
 
 def run():
 
-    print("\n FACTURA CON COMPOSICIÓN ")
     print(" Crear una factura que almacene productos, cantidades y calcule el total.\n")
 
     p1 = Product("Teclado", 30)
