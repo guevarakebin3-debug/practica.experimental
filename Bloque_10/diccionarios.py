@@ -2,36 +2,11 @@ def run():
 
     print("Crear un diccionario")
 
-    # Validar nombre (NO números)
-    while True:
-
-        name = input("Ingrese su nombre: ").strip()
-
-        if name.replace(" ", "").isalpha():
-            break
-        else:
-            print("❌ El nombre no puede contener números")
-
-    # Validar edad
-    while True:
-
-        try:
-            age = int(input("Ingrese su edad: "))
-
-            if age < 0:
-                print("❌ No puede ser negativa")
-            else:
-                break
-
-        except ValueError:
-            print("❌ Debe ingresar un número entero")
-
-    city = input("Ingrese su ciudad: ").strip()
-
+    # Datos fijos
     person = {
-        "nombre": name,
-        "edad": age,
-        "ciudad": city,
+        "nombre": "Carlos",
+        "edad": 20,
+        "ciudad": "Guayaquil",
     }
 
     print("\n--- Acceso con [] ---")
@@ -47,38 +22,16 @@ def run():
 
     print("\nMostrar claves y valores")
 
-    # Validar segunda persona
-    while True:
-
-        name = input("Ingrese su nombre: ").strip()
-
-        if name.replace(" ", "").isalpha():
-            break
-        else:
-            print("❌ El nombre no puede contener números")
-
-    while True:
-
-        try:
-            age = int(input("Ingrese su edad: "))
-
-            if age < 0:
-                print("❌ No puede ser negativa")
-            else:
-                break
-
-        except ValueError:
-            print("❌ Debe ingresar un número entero")
-
-    city = input("Ingrese su ciudad: ").strip()
-
+    # Segunda persona fija
     person = {
-        "nombre": name,
-        "edad": age,
-        "ciudad": city
+        "nombre": "Ana",
+        "edad": 25,
+        "ciudad": "Quito"
     }
 
     print("\n--- Claves y valores ---")
 
     for key, value in person.items():
         print(key, ":", value)
+
+
