@@ -12,8 +12,12 @@ class Employee(Person):
 
 
 def run():
+
+    print("\n=== HERENCIA ===")
+    print("Crear una clase Persona y una clase Empleado que hereda de Persona.\n")
+
     employee = Employee("E01", "Carlos", 500)
 
-    print("Empleado:", employee.name)
+    print("DATOS DEL EMPLEADO:")
+    print("Nombre:", employee.name)
     print("Salario:", employee.salary)
-
