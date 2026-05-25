@@ -1,7 +1,7 @@
 class Product:
     def __init__(self, price=0):
         self.__price = 0
-        self.price = price  # usa el setter
+        self.price = price
 
     @property
     def price(self):
@@ -14,9 +14,7 @@ class Product:
         self.__price = value
 
 
-p = Product()
-p.price = 100
-
-print("El precio del producto es:", p.price)  # salida en español
-
-# p.price = -5  -> Error: El precio no puede ser negativo
+def run():
+    p = Product()
+    p.price = 100
+    print("El precio del producto es:", p.price)
