@@ -56,10 +56,14 @@ from Bloque_15.filter_lambda import run as filter_lambda
 from Bloque_15.reduce_lambda import run as reduce_lambda
 from Bloque_16.archivos import run as archivos
 from Bloque_16.json_datos import run as json_datos
-from Bloque_17.promedio_mixin import run as promedio_mixin
-from Bloque_17.validacion_mixin import run as validacion_mixin
 from Bloque_17.exportar_mixin import run as exportar_mixin
-
+from Bloque_17.mixin import run as mixin
+from Bloque_18.animal import run as animal
+from Bloque_18.producto import run as productos
+from Bloque_18.triangulo import run as triangulo
+from Bloque_19.ejemplo_integrado import run as ejemplo
+from Bloque_19.empleado import run as empleado
+from Bloque_19.factura import run as factura
 
 # =========================
 # MENU SYSTEM
@@ -257,9 +261,22 @@ def menu_block_16():
 
 def menu_block_17():
     create_submenu("BLOQUE 17", [
-        ("Promedio Mixin", promedio_mixin),
-        ("Validación Mixin", validacion_mixin),
-        ("Exportar Mixin", exportar_mixin)
+        ("Exportar Mixin", exportar_mixin),
+        ("Mixin", mixin)
+    ])
+
+def menu_block_18():
+    create_submenu("BLOQUE 18", [
+        ("Animal", animal),
+        ("Producto", productos),
+        ("Triangulo", triangulo)
+    ])
+
+def menu_block_19():
+    create_submenu("BLOQUE 19", [
+        ("Ejemplo Integrado", ejemplo),
+        ("Empleado", empleado),
+        ("Factura", factura)
     ])
 
 
@@ -288,6 +305,8 @@ def menu_principal():
         "16": {"text": "Bloque 15", "action": menu_block_15},
         "17": {"text": "Bloque 16", "action": menu_block_16},
         "18": {"text": "Bloque 17", "action": menu_block_17},
+        "19": {"text": "Bloque 18", "action": menu_block_18}, 
+        "20": {"text": "Bloque 19", "action": menu_block_19} 
         "0": {"text": "Salir", "action": None}
     }
 
