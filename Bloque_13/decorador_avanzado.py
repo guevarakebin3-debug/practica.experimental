@@ -19,7 +19,7 @@ def run():
     print("Resultado:", add(2, 3))
 
 
-    print("Decorador con entrada interactiva y multiplicación")
+    print("\nDecorador con multiplicación")
 
     def decorator(func):
         def wrapper(*args, **kwargs):
@@ -35,15 +35,12 @@ def run():
         return a * b
 
 
-    # 🔥 VALIDACIÓN AQUÍ
-    while True:
-        try:
-            a = int(input("Ingrese el primer número: "))
-            b = int(input("Ingrese el segundo número: "))
+    # Datos fijos
+    a = 4
+    b = 5
 
-            result = multiply(a, b)
-            print("Resultado:", result)
-            break
+    result = multiply(a, b)
 
-        except ValueError:
-            print("❌ Error: debe ingresar números válidos")
+    print("Resultado:", result)
+
+
