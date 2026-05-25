@@ -28,7 +28,7 @@ class Invoice:
 
 def run():
 
-    print(" Crear una factura que almacene productos, cantidades y calcule el total.\n")
+    print(" Crea una factura que almacene productos, cantidades y calcule el total.\n")
 
     p1 = Product("Teclado", 30)
     p2 = Product("Monitor", 200)
