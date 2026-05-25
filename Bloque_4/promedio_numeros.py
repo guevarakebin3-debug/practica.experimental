@@ -1,24 +1,20 @@
 def run():
     print("Promedio de dos números")
 
-    # Primer número
-    while True:
-        try:
-            num1 = float(input("Ingrese el primer número: "))
-            break
-        except ValueError:
-            print("❌ Debe ingresar un número válido")
+    # Datos fijos
+    num1 = 10
+    num2 = 20
 
-    # Segundo número
-    while True:
-        try:
-            num2 = float(input("Ingrese el segundo número: "))
-            break
-        except ValueError:
-            print("❌ Debe ingresar un número válido")
+    # Validación
+    if not isinstance(num1, (int, float)):
+        print("❌ El primer valor no es un número válido")
 
-    suma = num1 + num2
-    promedio = suma / 2
+    elif not isinstance(num2, (int, float)):
+        print("❌ El segundo valor no es un número válido")
 
-    print("Suma:", suma)
-    print("Promedio:", promedio)
+    else:
+        suma = num1 + num2
+        promedio = suma / 2
+
+        print("Suma:", suma)
+        print("Promedio:", promedio)
